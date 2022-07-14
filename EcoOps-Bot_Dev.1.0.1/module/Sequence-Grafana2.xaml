@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Grafana2" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="698,1251" sap2010:WorkflowViewState.IdRef="Sequence_Grafana2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Grafana2" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="698,1282" sap2010:WorkflowViewState.IdRef="Sequence_Grafana2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="74">
+    <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -42,7 +42,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -76,33 +76,42 @@
       <AssemblyReference>System.Memory</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence_Grafana2" sap:VirtualizedContainerService.HintSize="476,1186" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence_Grafana2" sap:VirtualizedContainerService.HintSize="476,1217" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="in_Config" />
       <Variable x:TypeArguments="x:String" Name="out_DataHourlyReport" />
+      <Variable x:TypeArguments="x:String" Name="out_Screenshot" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="434,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[in_Config]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\data\in_Config.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\data\in_Config.xlsx</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[out_DataHourlyReport]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\data\DataHourlyReport.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\data\DataHourlyReport.xlsx</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[out_Screenshot]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\screenshot\</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
@@ -145,7 +154,7 @@
               </uix:NExtractData.Target>
             </uix:NExtractData>
             <ui:WriteRange AddHeaders="False" DataTable="[dataRefYTD]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="RefYTD" StartingCell="A2:A12" WorkbookPath="[out_DataHourlyReport]" />
-            <uix:NTakeScreenshot DisplayName="Take Screenshot 'summary referral'" FileName="C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\screenshot\ReferralYTDSenyuM.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+            <uix:NTakeScreenshot DisplayName="Take Screenshot 'summary referral'" FileName="[out_Screenshot + &quot;ReferralYTDSenyuM.png&quot;]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
               <uix:NTakeScreenshot.Target>
                 <uix:TargetAnchorable BrowserURL="http://172.18.219.98:3000/d/-sWjL0Ank/umi-corner-2022?orgId=1" DesignTimeRectangle="46, 115, 1320, 528" FriendlyName="'summary referral'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;grafana-app&amp;gt;div&amp;gt;div&amp;gt;react-container&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' tag='DIV' check:text='summary referral per partner x status referralSENT&amp;#xD;&amp;#xA;BRISPOT201PNM340PEGADAIAN101Total Realisasi ' /&gt;" Guid="6a684376-8165-4a5e-b80d-011782c89f60" ImageBase64="" InformativeScreenshot="627c44c7a69f7de16a0937e93e96bff0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UMI corner 2022 - Grafana' /&gt;" SearchSteps="Selector, FuzzySelector" />
               </uix:NTakeScreenshot.Target>

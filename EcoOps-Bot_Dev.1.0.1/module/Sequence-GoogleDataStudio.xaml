@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_GoogleDataStudio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="698,776" sap2010:WorkflowViewState.IdRef="Sequence_GoogleDataStudio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_GoogleDataStudio" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="698,1648" sap2010:WorkflowViewState.IdRef="Sequence_GoogleDataStudio_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
       <x:String>System.Activities</x:String>
@@ -70,33 +70,42 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence_GoogleDataStudio" sap:VirtualizedContainerService.HintSize="473,711" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence_GoogleDataStudio" sap:VirtualizedContainerService.HintSize="476,1583" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="in_Config" />
       <Variable x:TypeArguments="x:String" Name="out_DataHourlyReport" />
+      <Variable x:TypeArguments="x:String" Name="out_Screenshot" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[in_Config]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\data\in_Config.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\data\in_Config.xlsx</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[out_DataHourlyReport]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\data\DataHourlyReport.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\data\DataHourlyReport.xlsx</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[out_Screenshot]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\screenshot\</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
@@ -108,7 +117,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="early refresh GDS" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Report Transaksi 2022 (Summary) › Hourly Transaction" sap:VirtualizedContainerService.HintSize="431,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="2bc092fc-9854-4b8b-8bcd-865d3de82442" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="early refresh GDS" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Report Transaksi 2022 (Summary) › Hourly Transaction" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="2bc092fc-9854-4b8b-8bcd-865d3de82442" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -146,7 +155,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Referal SenyuM" AttachMode="ByInstance" DisplayName="Use Browser Chrome: GDS Record Referral Berhasil (Done_Success) › Copy of Rekap SenyuM Mobile (YTD2)" sap:VirtualizedContainerService.HintSize="431,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Referal SenyuM" AttachMode="ByInstance" DisplayName="Use Browser Chrome: GDS Record Referral Berhasil (Done_Success) › Copy of Rekap SenyuM Mobile (YTD2)" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -216,7 +225,7 @@
               </uix:NExtractData.Target>
             </uix:NExtractData>
             <ui:WriteRange AddHeaders="False" DataTable="[dataRefToday2]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="RefToday" StartingCell="A4" WorkbookPath="[out_DataHourlyReport]" />
-            <uix:NTakeScreenshot DisplayName="Take Screenshot 'DIV'" FileName="C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\screenshot\ReferralTodaySenyuM.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+            <uix:NTakeScreenshot DisplayName="Take Screenshot 'DIV'" FileName="[out_Screenshot + &quot;ReferralTodaySenyuM.png&quot;]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
               <uix:NTakeScreenshot.Target>
                 <uix:TargetAnchorable BrowserURL="https://datastudio.google.com/u/0/reporting/3e94816a-3672-4524-a11e-ea6c2afe71ae/page/p_30dvwu3euc" DesignTimeRectangle="247, 150, 1093, 560" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl aaname='       ' parentid='body' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='       ' parentid='body' tag='DIV' type='' /&gt;" Guid="949c1ca3-a48e-4253-95b5-2260d6a79c4b" ImageBase64="" InformativeScreenshot="30a65d7a1f9ae7c5e3ef5cad44d40ed0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GDS Record Referral Berhasil (Done_Success) › Copy of Rekap SenyuM Mobile (YTD2)' /&gt;" SearchSteps="Selector, FuzzySelector" />
               </uix:NTakeScreenshot.Target>
@@ -235,7 +244,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Bestportal" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Report Transaksi 2022 (Summary) › Bestportal Today" sap:VirtualizedContainerService.HintSize="431,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Bestportal" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Report Transaksi 2022 (Summary) › Bestportal Today" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -318,7 +327,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NTakeScreenshot DisplayName="Take Screenshot 'DIV'" FileName="C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\screenshot\BestportalToday.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+            <uix:NTakeScreenshot DisplayName="Take Screenshot 'DIV'" FileName="[out_Screenshot + &quot;BestportalToday.png&quot;]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
               <uix:NTakeScreenshot.Target>
                 <uix:TargetAnchorable BrowserURL="https://datastudio.google.com/u/0/reporting/3e94816a-3672-4524-a11e-ea6c2afe71ae/page/p_30dvwu3euc" DesignTimeRectangle="51, 130, 1280, 560" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl aaname='       ' parentid='body' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='       ' parentid='body' tag='DIV' type='' /&gt;" Guid="949c1ca3-a48e-4253-95b5-2260d6a79c4b" ImageBase64="" InformativeScreenshot="d52507ee82ef45527c51485d730fbea1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GDS Record Referral Berhasil (Done_Success) › Copy of Rekap SenyuM Mobile (YTD2)' /&gt;" SearchSteps="Selector, FuzzySelector" />
               </uix:NTakeScreenshot.Target>
@@ -337,7 +346,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Transaction" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Report Transaksi 2022 (Summary) › Hourly Transaction" sap:VirtualizedContainerService.HintSize="431,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Transaction" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Report Transaksi 2022 (Summary) › Hourly Transaction" sap:VirtualizedContainerService.HintSize="434,923" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -369,7 +378,7 @@
               </uix:NExtractData.Target>
             </uix:NExtractData>
             <ui:WriteRange AddHeaders="False" DataTable="[dataTrx]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Trx" StartingCell="A2:A18" WorkbookPath="[out_DataHourlyReport]" />
-            <uix:NTakeScreenshot DisplayName="Take Screenshot 'Jumlah TransaksiNominal'" FileName="C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\screenshot\Transaction.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_3" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+            <uix:NTakeScreenshot DisplayName="Take Screenshot 'Jumlah TransaksiNominal'" FileName="[out_Screenshot + &quot;Transaction.png&quot;]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_3" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
               <uix:NTakeScreenshot.Target>
                 <uix:TargetAnchorable BrowserURL="https://datastudio.google.com/reporting/87028585-e84c-4d52-a2e2-3bc2f73de5dd/page/p_k72xqne7qc" DesignTimeRectangle="8, 79, 1366, 657" FriendlyName="'Jumlah TransaksiNominal'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-bootstrap&amp;gt;ng2-bootstrap&amp;gt;bootstrap&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='body' tag='DIV' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl type='' parentid='body' tag='DIV' aaname='                               ' check:text='Jumlah TransaksiNominal Transaksi03:00:0005:00:0007:00:0009:00:0011:00:0013:00:0015:00:0017:00:0019' /&gt;" Guid="ab4bc8cd-84ec-4bcc-a119-f8b4e5b29a95" ImageBase64="" InformativeScreenshot="049ea3ba87129c0169da1bb0387992eb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Report Transaksi 2022 (Summary) › Hourly Transaction' /&gt;" SearchSteps="Selector, FuzzySelector" />
               </uix:NTakeScreenshot.Target>
@@ -382,7 +391,7 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>

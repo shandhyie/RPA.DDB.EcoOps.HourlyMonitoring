@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Grafana1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="802,1726" sap2010:WorkflowViewState.IdRef="Sequence_Grafana1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Grafana1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="698,1497" sap2010:WorkflowViewState.IdRef="Sequence_Grafana1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
@@ -71,10 +71,11 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence_Grafana1" sap:VirtualizedContainerService.HintSize="812,1661" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence_Grafana1" sap:VirtualizedContainerService.HintSize="554,1432" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="in_Config" />
       <Variable x:TypeArguments="x:String" Name="out_DataHourlyReport" />
+      <Variable x:TypeArguments="x:String" Name="out_Screenshot" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -82,23 +83,31 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="770,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="512,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[in_Config]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\data\in_Config.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\data\in_Config.xlsx</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[out_DataHourlyReport]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\data\DataHourlyReport.xlsx</InArgument>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\data\DataHourlyReport.xlsx</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[out_Screenshot]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\screenshot\</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
@@ -110,13 +119,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Availaibility" AttachMode="ByInstance" DisplayName="Use Browser Chrome: tes service-- - Grafana" sap:VirtualizedContainerService.HintSize="770,1398" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Availaibility" AttachMode="ByInstance" DisplayName="Use Browser Chrome: tes service-- - Grafana" sap:VirtualizedContainerService.HintSize="512,1138" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="736,1151" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,891" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dataAv" />
             </Sequence.Variables>
@@ -126,8 +135,8 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="694,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="694,252" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,252" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,174" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
@@ -403,17 +412,34 @@
                 </Sequence>
               </ui:CommentOut.Body>
             </ui:CommentOut>
-            <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="694,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V1" />
-            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dataAv]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='plugin-component' idx='1' /&gt;&lt;webctrl tag='panel-plugin-singlestat' idx='1' /&gt;&lt;webctrl tag='grafana-panel' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='ng-transclude' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="694,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
-              <uix:NExtractData.NextLink>
-                <uix:TargetAnchorable BrowserURL="https://grafana-gcp.dev-kjt.id/d/6meR_7EMz-/tes-service?orgId=1&amp;refresh=5m" DesignTimeRectangle="59, 156, 159, 45" FriendlyName="'CBM UP'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;grafana-app&amp;gt;div&amp;gt;div&amp;gt;react-container&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;plugin-component&amp;gt;panel-plugin-singlestat&amp;gt;grafana-panel&amp;gt;div' parentid='panel-6' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='panel-6' tag='DIV' aaname='                    ' check:text='CBM&amp;#xA;  &amp;#xA;    &amp;#xA;    &amp;#xA;    &amp;#xA;  &amp;#xA;  &amp;#xA;&amp;#xA;      &amp;#xA;&amp;#xA;      &amp;#xA;        UP' /&gt;" Guid="4892de53-fccd-403c-9500-6b7062c8ba84" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKMAAAAxCAYAAAC2whnIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPSSURBVHhe7d3PSxRhHMfx/of9oea1LqXQJRe6eREvQXSKICL00CUvXbq0B38fLIhAAkEk9ZCQgazYSGxECyn4A38gzuz4ezOqVUkMjA7fnmf2md3Z3Zknp5xtYj+HF7rP7M7M4c0zzywLcyYYqiAuFK4sEq6oAigZxAi+kY0xEAxTsDJIgUAgKxgMAniDtca7s4+xMkAX7pyjuvYaqutgOmso0lUL4Ima5vMUrg45xMhmwsttFxEjlAyfIREj+AJiBN9AjOAbiBF8AzG68aybYgsararMUpwGhiPGeMu7+cyYYZpiY9fZ+F0aWWKv5/rpdnYfD+jVChubfixegxVidKF3RqPZxH1q6IrQ7Yk4LS4MUjMbN2IUgTWMKbS49IJazBjVBA30iX2MjNIiDxYx2kKMLijWsHoa6WbfVRamNUYRqTEb8hjnKT4zT1NvbxmfeZhYpvdzCcToADG6oKgKPbEZz79ML1N8/AYbz8Q4MjFKs8YMGqXYSpx6JxXE6AAxuvD7mbGW6tmleNaIlse4TLGX/O80DU/GaHHmKV0bR4xOEKMLRWtGY21YsGbMi1EjZTw3c8YnGimCGB0hRjdOdDfN1olv7lG9JcZI/yBN8UB72P+I0RFiBN9AjOAbiBF8AzGCbyBG8A3ECL6BGME3EONJdV6yH/8bXuzzP4YYJeofXaH25wpFO75RtPUHNTX9PFXR1mNj3+1Dr41j2Z1DOUGMEu2Dk9TWfUyTH76Tvn/kCb5vfoyOIcX2HMoJYpSIdhx6GqKJH4PPkHbnUE4QoxO2nuOXZrt4vMCPVe5rSMQowdd1duF4gR/L7hzKCWKUQIylhRglMjF+JVUTPw/TPxZFxKm62K5tkSbGtPWk5WdlhXRaXd8lLZ3bB2JEjFLexShoG6R+zrwfMSJGqdOJcZ1Uy3v19AFpm+tiG7O2S0k2jhgRo5QnMRoO2XbxGbEdMSJGKe9iPKLkljk76qR+QowcYpTwMkbMjMUQo4QnMfI1Y2pTbOP7TGHNKCBGidOJUYaFirvpLMQo4V2M/HvGFL5nLIAYJTIx7pGaFBGJS6oZkOlP1oyFECNilMrEyMJaE7Gpm3mzWUY6N3Mmd7KxIkb3EKOEGWMytSHCYvQd0r4cZiJKp1l07JJrbts+yMaFGN1DjBJmjPo+uwO2RmeHrSetl3DE6B5ilMjFyB2yGXKbrQsLItRYbKm9orUkYnQPMUrkx+gtxIgYpRBjaTnGyJ/lVu6Pa0OMpcMf1xaqcnhcW7AyTKGzIWOGNPFyAbwQqg5RRVX+k3uzMeIRv/BvVdEvo0Z1Pa0EiqsAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='tes service-- - Grafana' /&gt;" SearchSteps="FuzzySelector, Image" />
-              </uix:NExtractData.NextLink>
-              <uix:NExtractData.Target>
-                <uix:TargetAnchorable BrowserURL="https://grafana-gcp.dev-kjt.id/d/6meR_7EMz-/tes-service?orgId=1&amp;refresh=30s&amp;from=now-1h&amp;to=now" DesignTimeRectangle="48, 79, 1326, 37" FriendlyName="'tes service--'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;grafana-app&amp;gt;div&amp;gt;div&amp;gt;react-container&amp;gt;div' tag='DIV' /&gt;" Guid="189d094b-b5b4-4469-9831-d91703184f59" InformativeScreenshot="86034eb1cc5f2b31d824d124705fb669.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='tes service-- - Grafana' /&gt;" SearchSteps="Selector" />
-              </uix:NExtractData.Target>
-            </uix:NExtractData>
-            <ui:WriteRange AddHeaders="False" DataTable="[dataAv]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="694,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Availability" StartingCell="A2:A40" WorkbookPath="[out_DataHourlyReport]" />
-            <uix:NTakeScreenshot DisplayName="Take Screenshot 'CBM UP'" FileName="C:\Users\Administrator\Documents\UiPath\EcoOps-Bot_Dev.1.0.1\screenshot\Availability.png" FileNameMode="None" sap:VirtualizedContainerService.HintSize="694,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+            <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="436,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V1" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,403" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dataAv]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='plugin-component' idx='1' /&gt;&lt;webctrl tag='panel-plugin-singlestat' idx='1' /&gt;&lt;webctrl tag='grafana-panel' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='ng-transclude' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+                    <uix:NExtractData.NextLink>
+                      <uix:TargetAnchorable BrowserURL="https://grafana-gcp.dev-kjt.id/d/6meR_7EMz-/tes-service?orgId=1&amp;refresh=5m" DesignTimeRectangle="59, 156, 159, 45" FriendlyName="'CBM UP'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;grafana-app&amp;gt;div&amp;gt;div&amp;gt;react-container&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;plugin-component&amp;gt;panel-plugin-singlestat&amp;gt;grafana-panel&amp;gt;div' parentid='panel-6' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='panel-6' tag='DIV' aaname='                    ' check:text='CBM&amp;#xA;  &amp;#xA;    &amp;#xA;    &amp;#xA;    &amp;#xA;  &amp;#xA;  &amp;#xA;&amp;#xA;      &amp;#xA;&amp;#xA;      &amp;#xA;        UP' /&gt;" Guid="4892de53-fccd-403c-9500-6b7062c8ba84" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKMAAAAxCAYAAAC2whnIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPSSURBVHhe7d3PSxRhHMfx/of9oea1LqXQJRe6eREvQXSKICL00CUvXbq0B38fLIhAAkEk9ZCQgazYSGxECyn4A38gzuz4ezOqVUkMjA7fnmf2md3Z3Zknp5xtYj+HF7rP7M7M4c0zzywLcyYYqiAuFK4sEq6oAigZxAi+kY0xEAxTsDJIgUAgKxgMAniDtca7s4+xMkAX7pyjuvYaqutgOmso0lUL4Ima5vMUrg45xMhmwsttFxEjlAyfIREj+AJiBN9AjOAbiBF8AzG68aybYgsararMUpwGhiPGeMu7+cyYYZpiY9fZ+F0aWWKv5/rpdnYfD+jVChubfixegxVidKF3RqPZxH1q6IrQ7Yk4LS4MUjMbN2IUgTWMKbS49IJazBjVBA30iX2MjNIiDxYx2kKMLijWsHoa6WbfVRamNUYRqTEb8hjnKT4zT1NvbxmfeZhYpvdzCcToADG6oKgKPbEZz79ML1N8/AYbz8Q4MjFKs8YMGqXYSpx6JxXE6AAxuvD7mbGW6tmleNaIlse4TLGX/O80DU/GaHHmKV0bR4xOEKMLRWtGY21YsGbMi1EjZTw3c8YnGimCGB0hRjdOdDfN1olv7lG9JcZI/yBN8UB72P+I0RFiBN9AjOAbiBF8AzGCbyBG8A3ECL6BGME3EONJdV6yH/8bXuzzP4YYJeofXaH25wpFO75RtPUHNTX9PFXR1mNj3+1Dr41j2Z1DOUGMEu2Dk9TWfUyTH76Tvn/kCb5vfoyOIcX2HMoJYpSIdhx6GqKJH4PPkHbnUE4QoxO2nuOXZrt4vMCPVe5rSMQowdd1duF4gR/L7hzKCWKUQIylhRglMjF+JVUTPw/TPxZFxKm62K5tkSbGtPWk5WdlhXRaXd8lLZ3bB2JEjFLexShoG6R+zrwfMSJGqdOJcZ1Uy3v19AFpm+tiG7O2S0k2jhgRo5QnMRoO2XbxGbEdMSJGKe9iPKLkljk76qR+QowcYpTwMkbMjMUQo4QnMfI1Y2pTbOP7TGHNKCBGidOJUYaFirvpLMQo4V2M/HvGFL5nLIAYJTIx7pGaFBGJS6oZkOlP1oyFECNilMrEyMJaE7Gpm3mzWUY6N3Mmd7KxIkb3EKOEGWMytSHCYvQd0r4cZiJKp1l07JJrbts+yMaFGN1DjBJmjPo+uwO2RmeHrSetl3DE6B5ilMjFyB2yGXKbrQsLItRYbKm9orUkYnQPMUrkx+gtxIgYpRBjaTnGyJ/lVu6Pa0OMpcMf1xaqcnhcW7AyTKGzIWOGNPFyAbwQqg5RRVX+k3uzMeIRv/BvVdEvo0Z1Pa0EiqsAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='tes service-- - Grafana' /&gt;" SearchSteps="FuzzySelector, Image" />
+                    </uix:NExtractData.NextLink>
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable BrowserURL="https://grafana-gcp.dev-kjt.id/d/6meR_7EMz-/tes-service?orgId=1&amp;refresh=30s&amp;from=now-1h&amp;to=now" DesignTimeRectangle="48, 79, 1326, 37" FriendlyName="'tes service--'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;grafana-app&amp;gt;div&amp;gt;div&amp;gt;react-container&amp;gt;div' tag='DIV' /&gt;" Guid="189d094b-b5b4-4469-9831-d91703184f59" InformativeScreenshot="86034eb1cc5f2b31d824d124705fb669.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='tes service-- - Grafana' /&gt;" SearchSteps="Selector" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                  <ui:WriteRange AddHeaders="False" DataTable="[dataAv]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Availability" StartingCell="A2:A40" WorkbookPath="[out_DataHourlyReport]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NTakeScreenshot DisplayName="Take Screenshot 'CBM UP'" FileName="[out_Screenshot + &quot;Availability.png&quot;]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="436,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
               <uix:NTakeScreenshot.Target>
                 <uix:TargetAnchorable BrowserURL="https://grafana-gcp.dev-kjt.id/d/6meR_7EMz-/tes-service?orgId=1&amp;refresh=5m" DesignTimeRectangle="59, 151, 1305, 476" FriendlyName="'CBM UP'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;grafana-app&amp;gt;div&amp;gt;div&amp;gt;react-container&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' tag='DIV' check:text='CBM&amp;#xD;&amp;#xA;  &amp;#xD;&amp;#xA;    &amp;#xD;&amp;#xA;    &amp;#xD;&amp;#xA;    &amp;#xD;&amp;#xA;  &amp;#xD;&amp;#xA;  &amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;      &amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;      &amp;#xD;&amp;#xA;        UP&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;      &amp;#xD;&amp;#xA;    &amp;#xD;&amp;#xA;  &amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;  &amp;#xD;&amp;#xA;      &amp;#xD;&amp;#xA;        &amp;#xD;&amp;#xA;        ' /&gt;" Guid="ed83b47d-1a10-4147-95d4-270ef758e0aa" ImageBase64="" InformativeScreenshot="4b9e54c9177e6b4a19b8d01eb53c4b26.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='tes service-- - Grafana' /&gt;" SearchSteps="Selector, FuzzySelector" />
               </uix:NTakeScreenshot.Target>
