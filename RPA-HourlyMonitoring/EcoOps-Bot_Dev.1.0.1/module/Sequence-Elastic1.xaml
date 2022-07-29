@@ -1,0 +1,741 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Elastic1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="698,5702" sap2010:WorkflowViewState.IdRef="Sequence_Elastic1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="38">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="62">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence_Elastic1" sap:VirtualizedContainerService.HintSize="473,833" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="in_Config" />
+      <Variable x:TypeArguments="x:String" Name="out_DataHourlyReport" />
+      <Variable x:TypeArguments="x:String" Name="out_Screenshot" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_Config]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\data\in_Config.xlsx</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[out_DataHourlyReport]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\data\DataHourlyReport.xlsx</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[out_Screenshot]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\screenshot\</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Success Rate GCP" AttachMode="ByInstance" ContinueOnError="False" DisplayName="Use Browser Chrome: Monitoring Dashboard [GCP] - EcoBot - Elastic" sap:VirtualizedContainerService.HintSize="431,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,1146" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable2" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataSRGCP" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,174" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Flowchart sap2010:Annotation.AnnotationText="Login" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+                    <Flowchart.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="isLoginDashboard" />
+                      <Variable x:TypeArguments="x:Boolean" Name="isLoginPageExist" />
+                      <Variable x:TypeArguments="x:String" Name="data_WebCheck" />
+                    </Flowchart.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">300,2.5</av:Point>
+                        <av:Size x:Key="ShapeSize">60,75</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">330,77.5 330,114</av:PointCollection>
+                        <x:Double x:Key="Height">950</x:Double>
+                        <x:Double x:Key="Width">660</x:Double>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Flowchart.StartNode>
+                      <x:Reference>__ReferenceID9</x:Reference>
+                    </Flowchart.StartNode>
+                    <FlowDecision x:Name="__ReferenceID5" Condition="[isLoginPageExist]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">300.641666666667,445.5</av:Point>
+                          <av:Size x:Key="ShapeSize">79,87</av:Size>
+                          <av:PointCollection x:Key="TrueConnector">300.641666666667,489 150,489 150,534.5</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">379.641666666667,489 409.641666666667,489 409.641666666667,491 450,491</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID0">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">50,534.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">150,585.5 150,630 260,630</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <TryCatch.Try>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1231" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="ss:SecureString" Name="passwd" />
+                                  <Variable x:TypeArguments="x:String" Name="username" />
+                                  <Variable x:TypeArguments="ss:SecureString" Name="login_pswd" />
+                                  <Variable x:TypeArguments="x:String" Name="login_user" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable Accuracy="0.88" BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/login?msg=LOGGED_OUT" DesignTimeRectangle="592, 356, 235, 18" ElementType="Text" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzyAccuracy="0.82" FuzzySelectorArgument="&lt;webctrl tag='P' type='' aaname='Log in with Elasticsearch' check:text='Log in with Elasticsearch' /&gt;" Guid="96a26206-69f7-459d-aef4-736447530d47" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO8AAAAWCAYAAAAo7ctoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAaISURBVHhe7Vq/SyNPFP/+HZLGyu7E4g4Ljys8LIIWISkOLQ4tRIQgB4KCoCAopE6wUFIk2ASbxcbYGBtzjabaVJtqUyVVUq3d+37e/Eh2N27Mfb+57zc55gMLOzP75s28eZ95byb5iwwMDKYShrwGBlMKQ14DgymFIa+BwZTCkNfAYErx35HXe1Uv48YreeptejCNYzaYNPTIaxfjlEzlyVblscLJ02psjg4qXVUxLnTp4XCOZtby5IjyK3U63T4xWvd0nIpT4b1J2XnMnecffITcqH0MgYcxdXqDalBhbZbmD++po2omDsIe+/TQUmWDiUSPvM+5WZqJndKzKo8XTXoq3pD9G8KNZ99QodqUhZdTzGGWsi+ySK0b2vSXo6Dk1g8zdHnVfx5ctI3aRyRqlIX8TK6mykRuNU+W/bsykTFA2OM7WYa8E40Rydslt3Itnbr0SG4gZLTpqcTOfk1PrTY983tFkUmjU6OSJoN+d9pkW3nI5enOCUfkLtrQj1VXUbRJD6y70hAljl5cLlTbGBePqYaIi34PEz0Sll7QZ494XXLKUbqAMOn9CJO3A91ivtCB8fhN0XrBRsLjxEb1LBy/C3ukaZ3Ju5GW4xR1PBdtoyG2bdXIKrIukP2lrSoZfZmCVaMgx7AGwq7BNm0n17nFGPNYK66N0K3J6/rXVrUZTAxGIG+b7naRmi4k6PjqlPZSeF9ESiUWukmWaIvT3jnaNuK0uhKMMgJ+Aqj31VSCdk6OaOcL5GPLdBlKS91SnGZWLmQar2RmUtfE/Cf3mpKxJSEjxr11Q60h5F1dS6AuHalrZPK2bmlnAf39OIVD79M6v2OuvMHYV8vKDnD2kwTNxxJUct8ib5usLW0jbVtlP7btGtZAdHghjhpJn671EhNeySx+w3pk6HjrA2QyMqvxEOU5Jd/Yhwz64/fdW0FgYaeVJVr9wkeCDHQM0S3sgW9Ty7QDu60vQnYhrdbcYFLwPnnhRF8VUQS8RzqGI329qqMtAyddgmOrFFC1jULevbKKgJ1b2kN50/JHFkDojYMA+KSShmMtw5llKteyvsOZ5Fh75GWZMAnDujC+g7d0Kbngo9JG/9i9LrWcfrS1rz5iHCCOIBRkfkiiiIiGzEKec8Nps4+8yrZ9+/2kLM7XZ1XoKWOOsW26kx1Sx21gg8J3QoY3Blkv+ofN5X0Czvz4zhV6IVPeFvPgPiR5FTkZQ3Rr8vbW3MEZWNvAYGLwLnkFUWL+XVc5H3b0umjzn438UcWHN8jbdwTp3AOE8jnl8/ksJZHWcd8HFaRyJ9Bx8igi3ijkfVeXkjuDLr7w0o/w80AffCw4QpRChoFoNL+AaKVs5r1kKMkbV+wDItY2Zct1RfJo8g7a1geOohwNIftpDdExd0sOvpMyrKN/sfZZb6Ygr1PO0MEW6pFlyPHJ9QnYCRiqW9jDt64DdjSYBLxLXhH1Yt9w/lEVnCqz84E8neoR2mR0lGhQKeV3VIV/RN5XRdJTyiLd4yjAqfQ8UryzXqQZL3nfdE5fH04RqfFKmixbRlXX+hay2Ssic43uitvIErSeaPIO2hacDdxMo9xq0DPO65wC8zwbQiaNaBrcaFimU9kX6Xq22kQdIqqPhGHyDtVtyDsVCJF3mwrVn/SkH7uJBb2nA5BlNfcTaRtfcByJs9hZFc6h2uZ3L/BtnZ7gtJ84+oyFvNrB0J9KkWWqx+PsO1bAKVX7QVmlrL9I3r2ib+54ONL5+7BziGQp9bNUp04FJqEgLzat3Tit57ChiTbYBTLyjFqnS74HOLyXaa8/O9G2PefLImlbfURxSt8puXFKT6LDLt0dQmYDZ34ls1mUkd1zbkQm0E+19X1Emx5Olnq2CpN3mG5D3ulAiLyhRy22Z+dpky8tuG7hI+3AcXRwYOc53lqmz18SdGw9SoceE3n1tzpFFt/y5qAvroCgUzbp7scHMU6RRo6qS5E3/AyM18X5XNthEanxeT/yso3khRi3z1Hy5IYcZSQXZ89PXC8u4IJHi7Bt90oNOVcPm8PuR0RS2Taf2ifLkefTgAxS6N6m4Uu1+SIqm9vHewR5gUjdhrxTgR55RwGnVZq0EsELksi0+Q+DJyJoBLywjUbDoG01YOOIDiNlfnEM0boNJhm/RN4B6J3e/7MFdvzLSf4DgoHBH4J/R16BLjlV+eeEgqXOiQYGBr8dYyCvgYHB/wFDXgODKYUhr4HBlMKQ18BgKkH0NxtDvMc/LeGSAAAAAElFTkSuQmCC" InformativeScreenshot="4453d3b5af30387d5fc315f73cb484c6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Elastic' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Entry Data Login&quot;]" />
+                                <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="DDB.EcoOps.Grafana1" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[login_pswd]" Username="[login_user]" />
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Text="[login_user]" Version="V1">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/login?msg=LOGGED_OUT" DesignTimeRectangle="556, 325, 271, 30" ElementType="InputBox" FriendlyName="'INPUT x7481nfj'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Username' /&gt;" Guid="be952c8d-bc1b-4ecc-9a28-3a21f5821a5c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARMAAAAiCAYAAAB8+D0EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADOSURBVHhe7d27CsJAFEVR//83LbSwEETNe2TERJCAUU65DqzqTr3b2RUzs8DExMwiW2KyP5zL8XQB2Kx2Y94Sk3rohxFgs9qNeWIC/E1MgAgxASLEBIgQEyBCTIAIMQEixASIEBMgQkyACDEBIsQEiBATIEJMgAgxASLEBIgQEyBCTIAIMQEixASIEBMgQkyACDEBIsQEiBATIEJMgAgxASJWY+LjcuBXqx+X1/XjWNquL9d783RrWoBVXT+UaZpe9fiISV091QcA37xXygPvEez8w4y8bgAAAABJRU5ErkJggg==" InformativeScreenshot="17102a6d00ade66658aa3f895d4f9f7b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Elastic' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="556, 308, 44, 14" ElementType="Text" FriendlyName="'Username'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Username' check:text='Username' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAASCAYAAAAdZl26AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIgSURBVEhL7ZO/ayJBFMfv75BttrJTLBSLiEWCxWIKWYvjLGQtggTkuEohYCCQwtolhWKhpJE0kiaxUZs7m9VrxspurXarTbV237yZHY2ddkbwCwPz6828z3zf/MCJ6wxwbJ0Bji0J8AGr38DIDkZc9riB/uxDjr6vJICLQUlFcxaMuCxThTFw5ej7aj+Av0D3No5UktptB8znqy7+mjmkYioShTvp3BxN5Q7NtoZo6QX/B0UYZgf1fBih5E902Zr2rMF6N8gmVZrLoT5eibMGpSLFVei8MHRzglE7h4QSgdFbgF/nL59RvY4gFIujLOc22gvgUCKh+4kIstkEzFnDG1cQlXP+7AFXtSE8AXCBx39B2Yk4MQ8sexpC5px6Ltj7FEu+YdlBNvMEJu+ujgnQG6KqaOjyDbSuKw+wsEArk0NfPNKK9l6gxXg/0MEORJOXMGodWJQRM8OIpjXo+U0jZwRAEQMniBcAIundvgurfRPEFDRciQR37945w3mBwdedV5TJjez2Lo2c+yrt7Sce1VT8as/Fi8Gb4jETFod69hSWze0P9ghX3otbB+CvYLEV9Q8AYA0qr2eIx2RPhwHwudjGAcpnSQ6KJANJAJI9RL1AdaZQfe7UH+xX/E7HifwSqXQFb9LKtz8RJK41ZMmJ4EUOAPDnaOXj9Jo5lGtFWSL7AHiZNqDTH9QpNlXa/MNAXwAnqjPAsXUGOLZOHAD4BHVYf7oRqfa+AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,241" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" IsPassword="True" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" SecureText="[login_pswd]" Version="V1">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/login?msg=LOGGED_OUT" DesignTimeRectangle="556, 383, 271, 30" ElementType="InputBoxPassword" FriendlyName="'INPUT z4gao0jx'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='Password' /&gt;" Guid="8bca4710-5def-4761-8649-07deb60be064" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARMAAAAiCAYAAAB8+D0EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGQSURBVHhe7d0/T9VQGMBhPxSJMzMDK3ElhhEHJgcTJz8CNw5gQnTgO+DgpoObMXHkT3AwAjEqcLn3mLexF0JO4GrfqX3e5EnantP1lzYd+qAYY0zCiIkxJmVmMTk4Pi1fv/0AmFt0o51ZTGJhfDUBmFt0ox0xAf6bmAApxARIISZACjEBUogJkCItJp8+fylbr1434ri2B+ivlJjsvX1Xnmw8LfuHR404jmu1vUA/pcTk8dp6+X5yNjuP47h2cw/Qb2kxmeca0F+dYhKvMiuPVptw1MSa1x0Yhk4x2RxtlfcfPlbXQqzFntoa0C+pMYmvODe/5IgJDEdqTBYeLjbaczGB4UiNydLySqM9FxMYjrSYtJ+DQ7suJjAcqU8mt4kJDEenmOy82S3Pnr8oo5fbVbEWe2r3Av3SKSYhXm/uUrsH6J/OMQEIYgKkEBMghZgAKcQESCEmQAoxAVKICZCiGhM/Lgf+VfXH5THjyaRcXI7Lz9/njV/nFwBVl+OrMp1O/9bjVkxiYik2ANznekr5A0oBn4C6nmgwAAAAAElFTkSuQmCC" InformativeScreenshot="21df81e52c7619acf71c1e00ddc577a9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Elastic' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="556, 367, 42, 14" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl parentid='z4gao0jx-row' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='z4gao0jx-row' tag='LABEL' type='' aaname='Password' check:text='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAASCAYAAAAkAezhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVEhL7ZSxa+pgFMXf3xFcnNxaHAwOFgfFQdJB4vB4DqKDuIgUChUKLQg+cFYclA6WLuISXGqX+BZ1Uad00ilOOqVT3M6790t8UF4o7SIVPBBI7g33/jjfSX7gSHUCP7RO4IeWC/6GWa+OdoevB2iTFSyn8U3k8Omm+0hywbfQ8n6UH6cYTwZoZAJQOq9O61vI4WvM3UfSO/B/jXkVUr6PDXYwHgtQwn5I4RTuRmtqci2Li+gZXVl0jZ1nbdYMIKdtqbdCL+3HzeiN7l/RTiTRI+esSRW/ogFnrraCTd2NlkWu2UI5HEBtvoM5uoYa9EO+qqP2EXiNhlvWGvrvGM4rLxSXLYzhFEt+ZfkAJdGCsekj57vFmDeZC+gGwXnU7MktJJ7BvUQE8fs/sM0nqOknmNYLbnxZaHz09hS1RAxdWsLgUp76vO+/dz4Aly+TNDiJcnOAJUNQfdYpiJqaSSLuq2K2dzd4BiVfQnfOTnrUeHGwCn1YIuf7aIQpo6MS4hxBo45zOlEnsjvoFYrpcOuANxeiCqMFWexjfTYqe4kFrgM0SIBbK8zma3G0Fh2liJRXTcyMQLlMUTR2GN+zKQFnh3DzGrowh+MTQdtwHd+DbwYo+gp4Fn8Jfucr4PYC7XQISjqFYiULVTiwxvNVCBd0Cko0RE5x7r1qlJpeEhLHi+4tclvax4l7wwLkcAwqfRcqwXL5Hbg4xZ+Qg7Q/U0CRvhMP8OPTCfzQOoEfWkcKDvwFQ4XzNM1e+80AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/login?msg=LOGGED_OUT" DesignTimeRectangle="557, 432, 82, 28" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span' parentid='kibana-body' tag='SPAN' /&gt;" FuzzyAccuracy="0.83" FuzzySelectorArgument="&lt;webctrl type='' parentid='kibana-body' tag='SPAN' aaname='' check:text='Log in' /&gt;" Guid="01906457-308f-452f-a547-051feccd337b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAgCAYAAACILY8rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKrSURBVGhD7ZpPixJhHMe3S6+gvydfwr6EPXbsOMeORgvZpXY7eIr2uh4WPIVQwUALbYeKtdgVJBwCF82SIQU1xQZrWF1smhjHvv2eUUe3fSwVR0Z4HvjA8HyfZ8QPP5/nGZwViOZJc8Vu7Rdx9f5bnFt/KZgB5u4hORw0RyzrOH/7FXeCYHKYwwevC0OxVzbfcAcKpucyuXTEdru/uQMEs8OcrnTsLjcUzA5zutLp2NxQMDvMKVWsEDtvmFMh1gOEWI8QYj1ioWKDeQNmrcLN5oGUNQCrhW1OtmgWKjZUsACtys3mwlYO0cMcArxswfhI7AGkuAZFa0Ot6YjJydPZYQMZyjKFCoKPq1Cy6kje5xH1l6qQ6FpSjrEXP8J2vgVVayGRXKxw34i9prRhGm2SkcMGSdEsC4ndAye7kTcBN2uhbIy5z66OpqEjRNfss0zLQEZREYw3UKYpqpI6O8cjfCJWhWLZUF4M+9bStF7qdaytFyljkoeZI3oCsc3CJzeT2Jxa6fR4D/GJ2CpUtBEb7XMlcTKq7mnFjp3jET4Sa0AOj/T1JQX72V5kmAVYNQuxQ8aLTUHW4YjobTDvEdNsmCW2QaWc6yb9jCUSH4gUkTiBEDuKI/bvNviyOxVkqBBBa61Jw0y9gdCggsM5yBrbjCijTUym87AQOyWrO0e4HumdBlzCSayOLBNjlwIf4TuxZ3mHaI0q9YTOpckKotljOjrZCz06zcISiGUkEUw23IcHmQ7+fni6+hdLInb5EGI9Qoj1CCHWI4RYj+iJ7di4tBHnDhBMz8V78cG/tF1sPv/IHSSYnjvPPlDFdntvwvz4+Qu3nqZx4e4+d7Dg/zB3N5+kHZfOmzDskZ2tCXqrjfLX7/j8RYNarkOtCCaCXDFnpfo3x6HV6ZBR4A/SEDO0GXEDKAAAAABJRU5ErkJggg==" InformativeScreenshot="4dbe32940c1cf41deb3ae7a2c3e1e5ee.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Elastic' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </TryCatch.Try>
+                            <TryCatch.Catches>
+                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ActivityAction x:TypeArguments="s:Exception">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                  </ActivityAction.Argument>
+                                </ActivityAction>
+                              </Catch>
+                            </TryCatch.Catches>
+                          </TryCatch>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">260,604.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">360,655.5 360,696.5</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:UiElementExists DisplayName="Element Exists 'A  #'" Exists="[isLoginDashboard]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                                <ui:UiElementExists.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d4610a56-8ab9-4d6e-ad33-5ce158c6daf1" InformativeScreenshot="96f3cf07ecfd80fc5f902f2b6ff5f9df" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:UiElementExists.Target>
+                              </ui:UiElementExists>
+                              <FlowStep.Next>
+                                <FlowDecision x:Name="__ReferenceID1" Condition="[isLoginDashboard]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <av:Point x:Key="ShapeLocation">320.5,696.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">79,87</av:Size>
+                                      <av:PointCollection x:Key="TrueConnector">320.5,740 240,740</av:PointCollection>
+                                      <av:PointCollection x:Key="FalseConnector">399.5,740 460,740</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <FlowDecision.True>
+                                    <FlowStep x:Name="__ReferenceID2">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">40,707</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sukses Login&quot;]">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:LogMessage>
+                                      </Sequence>
+                                    </FlowStep>
+                                  </FlowDecision.True>
+                                  <FlowDecision.False>
+                                    <FlowStep x:Name="__ReferenceID4">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">460,707</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Gagal Login&quot;]" />
+                                      </Sequence>
+                                    </FlowStep>
+                                  </FlowDecision.False>
+                                </FlowDecision>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <FlowStep x:Name="__ReferenceID3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">450,457</av:Point>
+                              <av:Size x:Key="ShapeSize">200,66</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">550,523 550,560 250,560</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_2" Version="V1" />
+                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                          </Sequence>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.False>
+                    </FlowDecision>
+                    <x:Reference>__ReferenceID0</x:Reference>
+                    <x:Reference>__ReferenceID1</x:Reference>
+                    <x:Reference>__ReferenceID2</x:Reference>
+                    <x:Reference>__ReferenceID3</x:Reference>
+                    <x:Reference>__ReferenceID4</x:Reference>
+                    <FlowStep x:Name="__ReferenceID6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">240,337.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">340,389.5 340,419.5 340.141666666667,419.5 340.141666666667,445.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[isLoginPageExist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="943a904a-e960-4906-b7b5-9c94c2447aa3" InformativeScreenshot="365db53af8060a25d7b790f0fb53ccf9" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='kibana-body' tag='DIV' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:UiElementExists.Target>
+                      </ui:UiElementExists>
+                      <FlowStep.Next>
+                        <x:Reference>__ReferenceID5</x:Reference>
+                      </FlowStep.Next>
+                    </FlowStep>
+                    <FlowStep x:Name="__ReferenceID9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">230,114</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">330,166 330,196.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:UiElementExists DisplayName="Element Exists 'A  #'" Exists="[isLoginDashboard]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d4610a56-8ab9-4d6e-ad33-5ce158c6daf1" InformativeScreenshot="96f3cf07ecfd80fc5f902f2b6ff5f9df" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:UiElementExists.Target>
+                      </ui:UiElementExists>
+                      <FlowStep.Next>
+                        <FlowDecision x:Name="__ReferenceID7" Condition="[isLoginDashboard]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3" True="{x:Reference __ReferenceID2}" False="{x:Reference __ReferenceID6}">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <av:Point x:Key="ShapeLocation">290.5,196.5</av:Point>
+                              <av:Size x:Key="ShapeSize">79,87</av:Size>
+                              <av:PointCollection x:Key="TrueConnector">290.5,240 10,240 10,740 40,740</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">369.5,240 399.5,240 399.5,307.5 340,307.5 340,337.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </FlowDecision>
+                      </FlowStep.Next>
+                    </FlowStep>
+                    <x:Reference>__ReferenceID7</x:Reference>
+                    <x:Reference>__ReferenceID8</x:Reference>
+                  </Flowchart>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V1" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'Refresh'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable Accuracy="0.87" BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69f808a0-a340-11ec-b49c-2fc2e32d4b05?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Monitoring%20Dashboard%20%5BGCP%5D%20-%20EcoBot',viewMode:view)" DesignTimeRectangle="1294, 152, 43, 18" ElementType="Text" FriendlyName="'Refresh'" FullSelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='SPAN' /&gt;" FuzzyAccuracy="0.75" FuzzySelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='SPAN' type='' check:text='Refresh' /&gt;" Guid="d2580f08-3684-460b-a4eb-17f1e978316e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAAWCAYAAABQUsXJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKtSURBVFhH7ZUhbOJQGMfJNjpgBAq0MLqkM+QEyYIBs4TMYEhIMBhyArEZQoIgGAyCYGqWEFQNIcFwbg6JxCGROCRy+n/fa0tbuI7j2F24JYh/oO/7vvd+fe//vbrufrzjq+oMfyqd4U+lvws/WkFyGv9HssHPwCez4DZ6qoFvzhG3JX+sJcJPMi4TWfiaS4f4cRJfsuAV5xiTDX6KgKsA/nWF+ICkzhEuZuCuzLYKHKUO4UmqiDnFPiGx7EKg6xxj+gU+pNoSBm/w3SsQzZwlxHoPwYoCvrXQT2UwBV8swX1fgp/GI31jrEWn1lUptwfBmDPefwNPOcGXIcStdRaIVGmcckPKyhzX4NtLCEYsTBtr1pD2w7MdNeEXCD2SLapTxOhUIuUcuPIM0oheqNkgqzUQbk8QHRh1zELlMYS2bj2p2wGX6iDyukSMXsqXLCGsrTVDMJkjSNoMlaz7KMPfXmvrM3g31YSUhV6TyJAzDDbSDnwW/uaEFmQaI5CS4a0vtLjUbuxYaE498ozIBjY9xO0mZjxbNlqAT31HmOUaY1LrWZ9PHcOb7CFq5lpi8H6bbWL1Ajx1q6d24B/gLbIjUuBLueCt6uBMt1R4IdkamnQVNE7qA3jzWZtbhttWyyVkuMpTiq2pMQu4FDPw5BrgySabNXc9zxj2wNtsoyhwJyy/64XWy2zpIPiGrXectKaeoF7JPeDa2LTj4WkyIR+1kvsqrlO24x3RQvkhoiP6/1t4mqso46ZlNVys2dGa8a4/hq8yMb8PzE4X1Evs/yfgSQwiWIPAAOk51qqBkzLasbvJQjd045h5e+FJI2rG9Ddcabah33QPojYv3TR5siA1OJekq5kaVDB64w/gD5c00G+Do0Rf4bixGQeN79FR8P+LzvCn0hn+VPrC8O/4CSzvXjGcmgeCAAAAAElFTkSuQmCC" InformativeScreenshot="de3578510d50aef700d06c8c9f08aa49.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Monitoring Dashboard [GCP] - EcoBot - Elastic' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1263, 146, 89, 30" ElementType="Button" FriendlyName="'Refresh'" FullSelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='BUTTON' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQmSURBVGhD7Zo/aONWHMfN3dnnOLlYsSUrUqhzQ+hgOLzEy0FIhyyBlCzpYK6ch9wSAhmMF/fAhZC2qEMgePIdmIALzW23XbeM2TJ6dNshY7qUzt/+fpIsyfZzEhQn8vCGD5beP9mf997v9wSOmUsvIXlcpPQIGJT+9ieYH/7E0qf/JBOAXZpvfx4QznjSDRb+2z/CzpLwsFNjSLy/0j/+JewkuT/mx79HpRvmsrCxZHKwYyn9kZHSI0BKjwApPQKk9Ah4VOlG+wp6syusmyidK5ii8inhwaRr1gVefPfehq+5TG18wYudH0baDnIBpbCGRJ/1fSi1SxjCtsP0kFnP4+nKGlK1nqA+HNq7NSiWuC4ME5fOqzlZ+hap9Te2ZIav0xXrjtLPMR/bgnJ8ZY9ltC6R2S4hXnEm7kZap0gWWtBFdfdAK8cwfySuC8PEpSdXt5CpnXn3LE798Q+bdOVXW36w/SiO9IVWoKz9GallC5rXpgft4MQeS6l3nV3QPoeyvYP48g7mqDzbdMvqtEuOWtT2BKo7ptH8DIXapN+dQht4ThfZPSqntgvWlVduS2/0oLp1GVoQXp8QTFQ6hxFe1cEyjuG8uhmWxJMQrB9FIJ1XsCe9i4XXFD72zqHTLsiWN5AoX8Ds0ETUqhSSqsjQjsq13X4caspntMucEGUeHSJRPET2uAedJiNV2EHGftYF0oUNkkuT2KIQ9zqPuca1/XyWHqc+C1bX6bNSop3ofrcQTFQ6i+UQIqpj7pZIWfoa5mpOaFIbZ5gv5jFz4PQzG9WhUHNJOWAX2b7k1VMs9uvcez/cdKEU3yDDbd0ys77rjNc6w0zhBDmvrQ9LnwuEF/1gC8mD8DnjUaUrey0bUZ0PS3+FmW3eyhZSxRhm9vyJWqQf/MQMJFriWdrdGWOke/f22HnEA30TK3nEyudUd00JcwtPtRKSG1UoFE76zxyO6fwdpka6KLwEmd3c904y4xkKL5aF+Iofz50fPGa33El6NZAbRFxTzKdcsPEKz93JnmrpDCdS0Wrm5HrThPgMSScJ6mbO/5HNFp4XA2GgQ4I2T5Hr0PWt0mms7Txm635e0WuHdpJcatL3q3zxzvccdp5QruDrqZfOcZu3beqb70n0Jxu+5sm4PYkyw9IJlpfeh8pi6V6v7yNhluznxCnUzNIJxmt3o3SiQ0ly9Ws8s8MLfa6eQLPHpZPLJoUqSryJAh1RKXGqbuyfeul9+qcWjsu3h5RwmG3ndBEKems13Em8U/kEeTDpkvFI6REgpUeAlB4BUnoESOkRIKVHgFC6/Dvdw8F/5BJKX6z8AvP3f4WdJOFhp8bu8RjpRh46i/8Q/lVXMgi71OntnN2OSO+L1xe/gpZbgqaZUDVDcg/YoZYzbadB4SPSHfL2zEjuD7vse/Wlv8T/SFTn1Om4YcEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dataSRGCP]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='SR GCP'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='kbn-agg-table-group' idx='1' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;webctrl tag='kbn-agg-table' idx='1' /&gt;&lt;webctrl tag='paginated-table' idx='1' /&gt;&lt;webctrl tag='paginate' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='3' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69f808a0-a340-11ec-b49c-2fc2e32d4b05?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Monitoring%20Dashboard%20%5BGCP%5D%20-%20EcoBot',viewMode:view)" DesignTimeRectangle="117, 338, 89, 34" FriendlyName="'99.986%'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;kbn-agg-table-group&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;kbn-agg-table&amp;gt;paginated-table&amp;gt;paginate&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableCol='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='99.986%' /&gt;" Guid="96d4f780-426f-47b4-b572-cce01d64723d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAmCAYAAACmlJfBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKbSURBVGhD7Zu7ThtBFIZ5Eah4BKTUPIuhASl00HEVIBLShYcINY+SVGCQiGzvYgS2CSSIYvL/Z2eWxZoxlX2yzik+sZ6bz3xz5tgumJmdm3fGZDHpCswsfFh0xuQQ6cOnYIwfk67ASOmNlSO3c3jttvaeXaPxogpj2D/uSEyxWOtEUvraxonb3H12386e3PfWL3dxpwtjYCyUv7T6KRpzXUhKPzjO3OnZ76gATSiety8Wc11ISmdG/Wg/RjeuCTN+c+9PNOa6kJTOOiobve27ZvveXbZ7rpkPXgVkPbShvdPHmFcpI/u5Vodrgayy1k2/aON7dCtjw3wZN8DcnjwztljMdeEd6dhoEOQlNG8oCUJbFPQAuZQVxHgS/dW1Llt+rfIZY/08WYOHkz0UcziO6/iDmnLpFAJ5QSY3zswTIb5NxkBaGEMS/aXAOy8zx7OsCZldT1jDv1dx0Lw1/jDA/5HpObLw1j9Teu4lsGzweVh6ql8yGWuQcDt4QHyN0lGuL+vgPXNIR+kR8aHsgCmXjk12kamUwXobMp1CWLNFVtH/Rnq0H4eG11JGQqajfJS3R+YNZE51LfkMyEIMhfzpz3RmoHwQVkoCszd8EHbxXLn6QrSfZSZSquRWeOmhvocxUlbQx78cyzkoW1MrvfzKyI0yYyXT3sqRtjJ70Y6svOKYRL9kbbVdSoYvW76tPCyuwdvFA5fnYsw5vjIytljMdSEp/eCL/TgaF0npa+snbhsZRfH/wo8kxsBYmOUf179GY64LSemE4ncOf8pGWUc1YQy8fcurn6Ox1omR0o3xYNIVMOkKmHQFTLoCJl0Bk66ASVfApCtg0hUw6QqYdAVMugImXQGTroBJV8CkK2D/iTFhRPrwKRjjZt79BVyKz0ZwmlS0AAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Monitoring Dashboard [GCP] - EcoBot - Elastic' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69f808a0-a340-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Monitoring%20Dashboard%20%5BGCP%5D%20-%20EcoBot',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))" DesignTimeRectangle="8, 100, 1349, 636" FriendlyName="'[Summary] Pasar.id'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;" Guid="2b319a8e-dfa2-4960-a57f-84c42460b748" InformativeScreenshot="9f371f8549d1660683769c0b165deadb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Monitoring Dashboard [GCP] - EcoBot - Elastic' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:WriteRange AddHeaders="False" DataTable="[dataSRGCP]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="SuccessRate" StartingCell="A2:A8" WorkbookPath="[out_DataHourlyReport]" />
+            <uix:NTakeScreenshot DisplayName="Take Screenshot '[Summary] Pasar.id'" FileName="[out_Screenshot + &quot;SuccessRateGCP.png&quot;]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NTakeScreenshot.Target>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69f808a0-a340-11ec-b49c-2fc2e32d4b05?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Monitoring%20Dashboard%20%5BGCP%5D%20-%20EcoBot',viewMode:view)" DesignTimeRectangle="8, 142, 1349, 594" FriendlyName="'[Summary] Pasar.id'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='dashboardViewport' tag='DIV' aaname='' check:text='[Summary] Pasar.id - Response code 200 400 500Dashboard panel: [Summary] Pasar.id - Response code' /&gt;" Guid="23dfe2d5-d988-47d8-80a0-4da8888e41de" ImageBase64="" InformativeScreenshot="5aeeffaf61c25b5e5dd961fef5cb7340.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Monitoring Dashboard [GCP] - EcoBot - Elastic' /&gt;" SearchSteps="Selector, FuzzySelector" />
+              </uix:NTakeScreenshot.Target>
+            </uix:NTakeScreenshot>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA7jSURBVGhD7ZkJVFRXtoajUROTGAuURkSQQeZilqgooxPEGLRjTLo7if1MjBqNIGIUUVAQEWVUBGUWcYiJIWg0Godyng2+zktiGwNGQONYiLNVnv/tc+69VSUSnxm631pvvb3Wv/6997lV99vn3rqWxVP/H/8XolO7p1WBqhdDU5xtsld6OlUdD/SqOxPso700MAAXw/wZz3cGeNRU+bloUpxssiMtVCP4a+SX/+9FP1WnUA71Q5AEqwBfDO8NoVB/9nOon6h/DqOaS+T+os5x61k2tKtqhPx2/77g4Dt7u9cISBnYAGoA5pD+EjRJqX8OlZ10IcSXXaD6aB913WjLLmPkt//XRY9nO9ht8HHWPAxqAqeIoC6E+kmAJKlW+go4rZsqxA8bvHtp+Dnk0/2xMc7aMvpUf2+tAkwnZJITIHcZUEAqgCag54N92XmClHIfkZ8P8SUpLun7QE/tuO4WMfJp/5iI62mVJMFw0IfBFDhDLoD4MZKMcFK/MYjD+0oeTH3yxiBvkXNvHECiPNbWMkk+/e+LuJ7dkgScCaSQAdAEkgMpcLzmcByMi4ORxBAC1kccL/qUczW08Gm/d4hptt2SOISys49Ay7tIJzPuIklygiBvUADJORivTUEf0gDFvQ2KtfnTbxvive5/ijbZLQOcJHn3uDigDCsf26o4mOIN/b2YgCXAepFLsPWBnqyeuyJe9/fGWKuuv+4zwZ8E/MNEJzTeAgKSi3bVFIZL2V25L9Y4lOIykOKmcKJHLtVeUv6Qe+GbPh5a62faP/nTaZufcw29Md8ZMYApnJJLuygBiN2kWtnN+kDKFUgBKIGYQp3j6qdm3EUdKOmhtUBP6kn62N1eI+M9PsyDbf++9Y2+xt1TXIGTpeSGHp20MWIAmnIX4fbeXdCdb4QhdM1g14/jwY/zoK8ZDv2R3iQ/pj/iD/1hP6Y77CukP0w17ykSPT9+jKhDfF8IkTF/OdS5Q+rGZERKYLSDptASKJeya560S15oiOiP6yUFeNDcLBM/Ph40rJCgZEDdYR9yX6VH4rXSU+SDY+XONTJm66Hyt4ryWzMSXPkTg03uS9NLK/XEJSZdGBXx0G4332H44uQ9ZG29g+nrbmFC+U1kfnkbu0/p5CPkuNsI/deRtPPeTHfImwNDf8gHOhLPHxyRap7TuuyeLNj3+VAZ99FwmNq3ynf1COa3eiQGlL6K78N9pHtT3I9ixw36qa+anX/tYfi1h+4hPO06AuY2ISBJlkkelXMDhZq78tEU0hAESoAGedJAXgJWL9yLepJ0h9Rsx7Jf+Cw83bG9yrdyBBT5VEaxhVOC2E/9CJaLgIVE7iFcgee7Pr7sJnoT5JOIH8tfI4IPcaw/Byepme6gmsB5Tu9/0MOQ6w+q+TqubHO7pnqhla/inf2sRhA0gRP8qigxhPeqV9nRwT4Eq1aGwNk+HF6NpuJ8CYDi/dKb8E9sImmFc0glf0Ty2vulN+RX02eiPp9gJUDdQXemF/IwqXlOkj3Y57lHbyPrv6pzOLh3BQ1B7lUxnHlXvIq3Fg4R0Gf7ekCSGg0jh8qnBpbvugM/AmopDttan4sPwX31Qfl2oqeU/mgfDk6QrcmNBnEjd6Vj3JAZbZEtYxvDcWZ/DQf2oQG4e658hXmvfBVcm/7cW4Lv44E60uXkBOnEFMOyrsN3jlYSQRmk9EzXTI+hPHhBk+FWelC7gOAkQAF8wIVx6bkOunJ46kn+aVr3KhnbGE7JITVeK4fDKGkIroF5Eaw2wI3V9XEH9zsnjoqT7vruPnxkQO6/RRu/vifei13dAb0MSNCSBLQLdPud+CDUc6baiZ35xL5WxjaGx7JIrWf5cHiWvwIvcnU5wVPOe+ryYSz33b6s7iUagKQ87xdtuUUQ1+A9m0TOcw4l5Ryw9T53pc/fQ8TdBoLjgM4CVH/AycQl6fb3YjQMLn/pcE3GNoZnGcGaisOb1H2WR7J/BLrTlXCXTkjxbkkzvAieS4FSatFrJRfDyjlXzOqb8rtBAt3fi4OSHGnXe1FPkm6/A9Pvd6R1EtUytjHUBGnUMKhLSZR7lL7M3Ek8nxndn53xd5Gff0D06hsGEM8WruQtayVX6rHFzTh79ixyc3MRNdAGL4fYomyuA9N+JcPudzDqgAN0+7jsmIxtDLe8IVoPgnYvjWQc3qPkZYIn572SSKbU2yO86fnfIAZI33wL6oSr8EwgGINa1iQOS64cq+aaJeXj5lfB00MNBzt7dDEzh421NexsbBHezx41FfYEy2VHA3DvSVfBnm4hG62MbQynRaF1biagwmXxPpc75W8kh+GmZrsYoOrEXQElgIRL8pDVck3qmdQz6uHp5Y8e1jZwd3VBl67m6GxuBiurbrC0soa7cw8cKKJ7f58t0+/rCT0NQkPgWKnVo9+Jekzyq+KA7sWRtOPkcu5WHMFcSaJfLPU0a7LFAPwR2C9FawA2iHZXyd1byd1nXRb5gA83w5Z23LGHNSwsu6OPsz0mhnphfKg3wlxtYd7pBZipzFCd0QO6vT3YvT3WTLfXBjuWWDz6dcLyTbccDssh3Yo4LMGTuxYNZYpz8X5Y4QjWfE/68FUcuCNgDJJBf0luXDMvieNeH58MXxcXfDL1deSPjcS2uNdwqXAKTmWMx5HZf0VKVG9066LCjDG2NIA1u6ux5oMgc3LnHBnbGB2dzUNcCyPAxYHdirgbJfWNyjtRKQbg8U7RdQK7IsEJtcwVSbVr/GWModfExk7DYF93HEkfhx8K43F5XQqurE1EfelMfL14Aqpi/gxPRztM/ZsN9HutcU/Tja6ANaKCno2SsY3xdMd2KufsgdeUIVwKhzDXwqEil3woXFYMYc4k3gsoew0NzT+LAfitxIdwjedwLSSAH9bbK7TiNVu2bEHSXyJwsmAmPk+bhtr1OcCJKjR8moMdWTNQnfgewnzUyJ/Rg+n3dsddjRV0e6yger5N67+r2kwL0LisGAoBSc5zAS/nipQ6fM07hiF4LN1xG+Hp1+BCkIpcadeVPGDeVZTvvw3G6En8QI/qokxsnvs+/rliOtYlTcU/ixJxc1MGavJmomLWZBzPjsZ7r4Tgu9VdmG6PJRc2pHb+XMZ9NJ5zMgt1WT4ETssHMwFLOZez7LzPpdT8mNDKt1hD8wV5BCm2f3sPqV/cxNuFTfigolnknx2/I3ZdwFP81PA9jqV9gFNFM3CrOh3X1qbgUuU8XP04DXUlc3CmNBl1pTOwIfE/0LDWg3beEvc1Foga8Myjt49pWE/113BABVLkBYOFnAoGMecCpSf35fUlxyoE2P8UzXdviGP7Fo9gR7PGomFNCtiRtWCaUtRVpqO+Kg8X16QB+1bi+uZcnCtLwpn8V6DfY4Eza80f/Q7UMjrSVXAioF75gxh3p3wJvlf+QFE7khvq/EFiXVkLq3wLM3YtxuHGk6g3ubV4vr32AObvy4dfyQj0WjYQcWv8WP1nQey7knjgcAVOV8yHJmUK9qXGYlP8WDTtLIZ2ax5qliXg+ib6f8Hurnh7SIe/y5iPD34VJDgZcNkgPpChlqClmq8Jl3OpLx8jrzkuG8hM38NveRjOfkUfyN3mbE/2aNzflos9Cyfhx/z5uFqWh43TxuDbolmorZyPhup+jI7D9qxOT/azCo/25h3t7DOCryknFd5CDnnhEhTtpjGXasc8qae4su64TOplr3dn93eZgcQO53vhUFY0rlWl4/bWfGirl6Lp88X4oWwO9iwZSUOa4VL1i1o7y7a/7md3VahNND8ZB1LgeK30TN1UvVrUihyWhgn44MIB0GnMcG+nGABXN1qyeaPCsHDMMGxNm4xti2KQ+8FoxI8einPr6dm/S4UpozrEtmnTpq2M9uRh9rJdksPScAIgCecw4bDnMFRzFzn1lVxZ4+Kv5TV3RR9/5oj7O19kul2dodd0xvdVo3F65VwUjR+GggkjUTA+Ckmvh2JT4jic/TyYJY7p8NCPu23aPNW2bZs2T3OXW48Pswj7uaYADkvCSMbcbkmoEVCpTdxwfG443iwNgG5XJ4J/Eec22LJ1yd5YX5iN5rp/oL78I9yoXoQrGxbgh+WTcXHPJ6jIz74f5Ou5pr+/zzSb7t0COrRv31HG+nWhirRLsicQRXa5oUw4Qdrnyv3cUMO6oSfLLjeEcdVu7cZqN3hga8FoLJo+GQnj3sGK+bPRpL2KxuO76JE5HTc3puFY5kRc/ulHlGSkIe6dN5H5UQyyE6Zjzofj6yb87Y3Ng4IC4y0turrLeE8WnUKso23S+mt7EggXhxR5jpTTUELGHtU5NBR576xhWJg7BhXpU1C4IBEVi1OwJCEOOQlTsTTxI5w+eUw8bhuPf4UvY4aiZtNqduf2LSxPmc2SJo3TpcVO1hUkJzASihYkoSQ9GX8ZHlkioz15tDN71s5ykreGg9nmBAtQnpvKNjuY8TWe07qoB9OVqsxKRHHaPJQvmoeC5HikxkxEFg1RMG8W9n6xgfClf6G3ratgN5ub2ZXGc6wwNZFlzIxlqVMnsZyEOLZsXsKD/OQ5upzEmVe6mKl++x8Dn3/Jcoz1nD51PbNDwMUhbbKDGHelJ0QDcC/8uCer+8wbZbTzq7LTsHhGNGkqlhF8cVoSNq4sgl53H6lJczAoeADmzIrH+drTyKcdz5oVh/S4aLYgdjLLmzuLlSxOZb4ebn/M35afU3cdYTHWo8omM0iAc5fyYNhmBRN8MALz+kK38xmhU+sDsJzu+cxZsShdPB+rctJRQVqblwXtxfNImR0PHxdXbK2uwn8d3Q+6AliRmoTi9BSkT48RV6yfn8+T/Wv8a6Lts+1UfBhVlEO2xURPTbdpfjU2qYFaPsS6T6xxubqd9vTqdnWfzmtXlfGh06YVCxJvVGQtRHlGKipzF4t7uvabr1H73Td4e9QoQH8fW9ZVoHRRCsoyF4gBcpLim3zcXf/9f9VvLcxVne3ee3NU+crMNDFAIX0wvzmowYZVZQju3Rvf/ucJfLmmFOUEX56VhnffeK28q5nZv+YP4L8nLMzN7CJCg2JmTHh3d1H2opOF2Zl4Sa3GzLjYkxmJ8bsHDwiMeTz4U0/9N+xZ6GR+bAFvAAAAAElFTkSuQmCC" InformativeScreenshot="48fbac2be0031c6913bfa635f015324b.png" Selector="&lt;html app='chrome.exe' title='Monitoring Dashboard [GCP] - EcoBot - Elastic'/&gt;" Url="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69f808a0-a340-11ec-b49c-2fc2e32d4b05?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Monitoring%20Dashboard%20%5BGCP%5D%20-%20EcoBot',viewMode:view)" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="431,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,174" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Response time GCP" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Response Time - Elastic" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,872" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="sd:DataTable" Name="dataTable1" />
+                    <Variable x:TypeArguments="sd:DataTable" Name="dataTable2" />
+                    <Variable x:TypeArguments="sd:DataTable" Name="dataRTGCP" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Refresh'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable Accuracy="0.89" BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69c56ba0-7769-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Response%20Time%20',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))" DesignTimeRectangle="1311, 152, 43, 18" ElementType="Text" FriendlyName="'Refresh'" FullSelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='SPAN' type='' check:text='Refresh' /&gt;" Guid="8f334d5d-07a5-468f-a1c3-e456e19e006c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAAWCAYAAABQUsXJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKtSURBVFhH7ZUhbOJQGMfJNjpgBAq0MLqkM+QEyYIBs4TMYEhIMBhyArEZQoIgGAyCYGqWEFQNIcFwbg6JxCGROCRy+n/fa0tbuI7j2F24JYh/oO/7vvd+fe//vbrufrzjq+oMfyqd4U+lvws/WkFyGv9HssHPwCez4DZ6qoFvzhG3JX+sJcJPMi4TWfiaS4f4cRJfsuAV5xiTDX6KgKsA/nWF+ICkzhEuZuCuzLYKHKUO4UmqiDnFPiGx7EKg6xxj+gU+pNoSBm/w3SsQzZwlxHoPwYoCvrXQT2UwBV8swX1fgp/GI31jrEWn1lUptwfBmDPefwNPOcGXIcStdRaIVGmcckPKyhzX4NtLCEYsTBtr1pD2w7MdNeEXCD2SLapTxOhUIuUcuPIM0oheqNkgqzUQbk8QHRh1zELlMYS2bj2p2wGX6iDyukSMXsqXLCGsrTVDMJkjSNoMlaz7KMPfXmvrM3g31YSUhV6TyJAzDDbSDnwW/uaEFmQaI5CS4a0vtLjUbuxYaE498ozIBjY9xO0mZjxbNlqAT31HmOUaY1LrWZ9PHcOb7CFq5lpi8H6bbWL1Ajx1q6d24B/gLbIjUuBLueCt6uBMt1R4IdkamnQVNE7qA3jzWZtbhttWyyVkuMpTiq2pMQu4FDPw5BrgySabNXc9zxj2wNtsoyhwJyy/64XWy2zpIPiGrXectKaeoF7JPeDa2LTj4WkyIR+1kvsqrlO24x3RQvkhoiP6/1t4mqso46ZlNVys2dGa8a4/hq8yMb8PzE4X1Evs/yfgSQwiWIPAAOk51qqBkzLasbvJQjd045h5e+FJI2rG9Ddcabah33QPojYv3TR5siA1OJekq5kaVDB64w/gD5c00G+Do0Rf4bixGQeN79FR8P+LzvCn0hn+VPrC8O/4CSzvXjGcmgeCAAAAAElFTkSuQmCC" InformativeScreenshot="8ab785bef58fa6367beff7577b060ae2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Response Time - Elastic' /&gt;" SearchSteps="FuzzySelector, Image">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1280, 146, 89, 30" ElementType="Button" FriendlyName="'Refresh'" FullSelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='BUTTON' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQmSURBVGhD7Zo/aONWHMfN3dmXOLlYsSXLUqhzQ+hgOLwky0FIhyyBQJZ0MFfOQ24JgQzGi1twIaQ9dNCD4Ek9MAEXmttuu24Zs2X06LZDxnQpnb/9/SRZku3nJChOlIM3fLD0/sn+vPd+vydwwlx4Dsn9IqXHwKD01z/B/PVPLHz8TzIB2KX5+ucB4Ywv3WDhv/0j7CyJDjs1hsQHK/3DX8JOkttjfvh7VLphLgobSyYHO5bS7xkpPQak9BiQ0mNASo+Be5VutC+gt7rCuonSuYApKn8g3Jl0zTrDs29/cOBrLlObn/Fs+/uRtoOcQSmtItVnbQ9K/RyGsO0wPWTXini8tIp0vSeoj4b2ZhWKJa6LwsSl82pOf/Md0muvHMkMX2eq1g2ln2IusQnl/YUzlmGfI7u1gmTVnbgrsY8xVbKhi+pugVZJYO5QXBeFiUufWt5Etn7i37M49cc/HDLVd478cPtRXOnzdqis/QnpRQua36YHbf/IGUtpdN1d0D6FsrWN5OI2Zqk81/LKGrRLDm1qewTVG9NofYJCbTJvjqENPKeL3C6VU9t568Ivd6Q3e1C9uiwtCL9PBCYqncMIr+pwGcdwXt0MS+JJCNePIpDOK9iX3sX8Swofu6fQaRfkKutIVc5gdmgi6jUKSTVkaUfl214/DjWVE9plbogyDw+QKh8g974HnSYjXdpG1nnWGTKldZJLk2hTiHtZxGzz0nk+S09Sn3mr6/ZZWqGd6H23CExUOovlECKqY26WSFn6KmbrbmhSmyeYKxcxve/2M5u1oVBzTjlgB7m+5OVjFPp13n0QbrpQyq+Q5bZemdnYccezTzBdOkLebxvA0mdD4UXf38TUfvScca/SlV3bQVQXwNJfYHqLt7KFdDmB6d1gogr0gx+ZoURLPMl4O2OMdP/eGbuIZKhvaqmIROWU6i4pYW7isbaCqfUaFAon/WcOx3T+Dg9Guii8hJnZ2PNPMuMZCi+WheRSEM/dHzxmt9xIei2UG0RcUsynXLD+Ak+9yX7Q0hmWLlrNnFyvmpCAIekkQd3IBz+yZeNpORQGOiRo4xj5Dl1fK53G2ipiphHkFb1+4CTJhRZ9v+pn/3zPYecR5Qq+fvDSGd62fGzM1j868DWfaq5PosywdILlZfagsli61xt7SJkrznOSFGpm6ATjt7tSOtGhJLn8NZ444YU+l4+gOePSyWWDQhUl3lSJjqiUOFUv9n8R0pn+qYXj8vUhJRpm2z1dRILeWg1vEm9UPkHuTLpkPFJ6DEjpMSClx4CUHgNSegxI6TEglC7/Tnd38B+5hNIL/Nev3/8VdpJEh50Wdn4ZI90oQq++pRUf/VVXMgi71OntnN2OSO+L1wtfQcsvQNNMqJohuQXsUMubjtOw8BHpLkVnZiS3h132vQbSn+N/KMXoJfwLuysAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dataRTGCP]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='response Time'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+                    <uix:NExtractData.NextLink>
+                      <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69c56ba0-7769-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Response%20Time%20',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))" DesignTimeRectangle="15, 298, 190, 58" FriendlyName="'11ms'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='dashboardViewport' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' parentid='dashboardViewport' tag='DIV' check:text='11ms' /&gt;" Guid="87825879-fb7b-4d53-96d2-db25c37281bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMIAAAA+CAYAAAB5scRTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOHSURBVHhe7dfPaxRnHMdx/4euza7VWBIFU8VUKVmwXvwBgUAoFCpYKBZDioJ4ak1hIz2klwqSCJJDDBIXGpVgCk2EJgSay9ZFgoGFwIohIQuW7cVc2kPx8PF5hslsfowQdfLsmH0fXrA7z3dnL983O7ujLrlHn6VPaE/9PqDm2N23DRACahohAAYhAAYhAAYhAAYhoCZ8/e2lNdafEwJqAiEABiEABiEABiEABiEABiEABiEABiEABiEABiEABiEABiEABiE40tHxUvMv/o2UvWfYd+HNEYIjhBBvhOBIeAjzut3fq4znD01vOLfKGhlembmrkaXKGSFEhxAcCQvh0ViXEhfS2uH5RSPrzj35W/o0mLmkvqeVM0KIDiE4UgnhhZ4szevXge/0UbDgG0OYWyrp99+uKr1mhhC2CiE4EoTw9IFOr1nuFatDeKzvQ2cIYasQgiMbQzipL7N3dDZY8rAQjit9464yP67MEMJWIQRHghC8R6Oy5v5ZvfDrQ7CPRmU98WZK6usmhK1GCI5UQljt9SFUEIILhOAIIcQbIThCCPFGCI4QQrwRgiOEEG+E4AghxBshOEII8UYIjhBCvBGCI4QQb4TgSHgI74YQokMIjhBCvBGCIz/1/K+5v/8LXei3Ye9l7xn2XXhzhAAYhAAYhAAYhFAN57O6N9yr9usPNZ6b1ejQFTW3XFTXg7wmc3llr19Ukz/bdL5X/ROz3vV7N68E1xEtQqiGH6ZUWChpeiKrzsx9TS4sq1Cc0/hAjzoH8pp5/kzZC2aupV/jZm5yqEftlwc1WlzW9NCZ8HvinRBCNdgQilPq9N+fGyupONEbnF/LLWtywLy+PKWZhby6TvmfO9WmZn8G0SKEavBDOOe/tyEUxrqD8yCE+m/0858lLT4vq1DwH6H8GUSLEKph0yH4Ws6oNZPVaME8Qk30VK4jMoRQDZsNIfNQf+Xuq9W/3jr8TIu5bDCH6BBCNWw2hJZuDc6UtbhQVtEzqz77J9qfQ3QI4T3Q9EWH2r9qCz1DNAgBMAgB2ARCAAxCAAxCAAxCAIwghGSKEFC77O7bBkwI9Wo++rk+bjgQOghsV3bn7e7bBrwQGvYd1KHDaWJAzbC7bne+cf+hSgh1yd1qaPxEh48c834qgO3O7npDY5O3+14IqV17vRcf1u1WYmdKHySSRh2wjSWVSKS8nbe7n9q1V68Ahz+i/xYgOP8AAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Response Time - Elastic' /&gt;" SearchSteps="FuzzySelector, Image" />
+                    </uix:NExtractData.NextLink>
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69c56ba0-7769-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Response%20Time%20',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))" DesignTimeRectangle="8, 210, 1366, 468" FriendlyName="'Summary ReponseTime'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;" Guid="4731c11d-4c83-4175-bf34-dbcf4a0b2fb8" InformativeScreenshot="f7bb0e04416af2ebac0ff2b7504495f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Response Time - Elastic' /&gt;" SearchSteps="Selector" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                  <ui:WriteRange AddHeaders="False" DataTable="[dataRTGCP]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="ResponseTime" StartingCell="A2:A19" WorkbookPath="[out_DataHourlyReport]" />
+                  <uix:NTakeScreenshot DisplayName="Take Screenshot 'Summary ReponseTime'" FileName="[out_Screenshot + &quot;ResponseTimeGCP.png&quot;]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_4" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+                    <uix:NTakeScreenshot.Target>
+                      <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69c56ba0-7769-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Response%20Time%20',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))" DesignTimeRectangle="8, 210, 1366, 468" FriendlyName="'Summary ReponseTime'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='dashboardViewport' tag='DIV' aaname='' check:text='Summary ReponseTime Dashboard panel: Summary ReponseTime Summary Reporting Reponse Time&amp;#xD;&amp;#xA;Pasar.id -' /&gt;" Guid="a4039da6-a1fb-4ff5-b47f-819652c06024" ImageBase64="" InformativeScreenshot="894a4f7e0c90ace6acdf76d9b12a1241.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Response Time - Elastic' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </uix:NTakeScreenshot.Target>
+                  </uix:NTakeScreenshot>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="b75e0201c8b58c1c8c80a0fc09be854b.png" Selector="&lt;html app='chrome.exe' title='Response Time - Elastic'/&gt;" Url="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69c56ba0-7769-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Response%20Time%20',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Response time GCP" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Response Time - Elastic" sap:VirtualizedContainerService.HintSize="431,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,872" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable1" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable2" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataRTGCP" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Refresh'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable Accuracy="0.89" BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69c56ba0-7769-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Response%20Time%20',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))" DesignTimeRectangle="1311, 152, 43, 18" ElementType="Text" FriendlyName="'Refresh'" FullSelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='SPAN' type='' check:text='Refresh' /&gt;" Guid="8f334d5d-07a5-468f-a1c3-e456e19e006c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAAWCAYAAABQUsXJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKtSURBVFhH7ZUhbOJQGMfJNjpgBAq0MLqkM+QEyYIBs4TMYEhIMBhyArEZQoIgGAyCYGqWEFQNIcFwbg6JxCGROCRy+n/fa0tbuI7j2F24JYh/oO/7vvd+fe//vbrufrzjq+oMfyqd4U+lvws/WkFyGv9HssHPwCez4DZ6qoFvzhG3JX+sJcJPMi4TWfiaS4f4cRJfsuAV5xiTDX6KgKsA/nWF+ICkzhEuZuCuzLYKHKUO4UmqiDnFPiGx7EKg6xxj+gU+pNoSBm/w3SsQzZwlxHoPwYoCvrXQT2UwBV8swX1fgp/GI31jrEWn1lUptwfBmDPefwNPOcGXIcStdRaIVGmcckPKyhzX4NtLCEYsTBtr1pD2w7MdNeEXCD2SLapTxOhUIuUcuPIM0oheqNkgqzUQbk8QHRh1zELlMYS2bj2p2wGX6iDyukSMXsqXLCGsrTVDMJkjSNoMlaz7KMPfXmvrM3g31YSUhV6TyJAzDDbSDnwW/uaEFmQaI5CS4a0vtLjUbuxYaE498ozIBjY9xO0mZjxbNlqAT31HmOUaY1LrWZ9PHcOb7CFq5lpi8H6bbWL1Ajx1q6d24B/gLbIjUuBLueCt6uBMt1R4IdkamnQVNE7qA3jzWZtbhttWyyVkuMpTiq2pMQu4FDPw5BrgySabNXc9zxj2wNtsoyhwJyy/64XWy2zpIPiGrXectKaeoF7JPeDa2LTj4WkyIR+1kvsqrlO24x3RQvkhoiP6/1t4mqso46ZlNVys2dGa8a4/hq8yMb8PzE4X1Evs/yfgSQwiWIPAAOk51qqBkzLasbvJQjd045h5e+FJI2rG9Ddcabah33QPojYv3TR5siA1OJekq5kaVDB64w/gD5c00G+Do0Rf4bixGQeN79FR8P+LzvCn0hn+VPrC8O/4CSzvXjGcmgeCAAAAAElFTkSuQmCC" InformativeScreenshot="8ab785bef58fa6367beff7577b060ae2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Response Time - Elastic' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1280, 146, 89, 30" ElementType="Button" FriendlyName="'Refresh'" FullSelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='BUTTON' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQmSURBVGhD7Zo/aONWHMfN3dmXOLlYsSXLUqhzQ+hgOLwky0FIhyyBQJZ0MFfOQ24JgQzGi1twIaQ9dNCD4Ek9MAEXmttuu24Zs2X06LZDxnQpnb/9/SRZku3nJChOlIM3fLD0/sn+vPd+vydwwlx4Dsn9IqXHwKD01z/B/PVPLHz8TzIB2KX5+ucB4Ywv3WDhv/0j7CyJDjs1hsQHK/3DX8JOkttjfvh7VLphLgobSyYHO5bS7xkpPQak9BiQ0mNASo+Be5VutC+gt7rCuonSuYApKn8g3Jl0zTrDs29/cOBrLlObn/Fs+/uRtoOcQSmtItVnbQ9K/RyGsO0wPWTXini8tIp0vSeoj4b2ZhWKJa6LwsSl82pOf/Md0muvHMkMX2eq1g2ln2IusQnl/YUzlmGfI7u1gmTVnbgrsY8xVbKhi+pugVZJYO5QXBeFiUufWt5Etn7i37M49cc/HDLVd478cPtRXOnzdqis/QnpRQua36YHbf/IGUtpdN1d0D6FsrWN5OI2Zqk81/LKGrRLDm1qewTVG9NofYJCbTJvjqENPKeL3C6VU9t568Ivd6Q3e1C9uiwtCL9PBCYqncMIr+pwGcdwXt0MS+JJCNePIpDOK9iX3sX8Swofu6fQaRfkKutIVc5gdmgi6jUKSTVkaUfl214/DjWVE9plbogyDw+QKh8g974HnSYjXdpG1nnWGTKldZJLk2hTiHtZxGzz0nk+S09Sn3mr6/ZZWqGd6H23CExUOovlECKqY26WSFn6KmbrbmhSmyeYKxcxve/2M5u1oVBzTjlgB7m+5OVjFPp13n0QbrpQyq+Q5bZemdnYccezTzBdOkLebxvA0mdD4UXf38TUfvScca/SlV3bQVQXwNJfYHqLt7KFdDmB6d1gogr0gx+ZoURLPMl4O2OMdP/eGbuIZKhvaqmIROWU6i4pYW7isbaCqfUaFAon/WcOx3T+Dg9Guii8hJnZ2PNPMuMZCi+WheRSEM/dHzxmt9xIei2UG0RcUsynXLD+Ak+9yX7Q0hmWLlrNnFyvmpCAIekkQd3IBz+yZeNpORQGOiRo4xj5Dl1fK53G2ipiphHkFb1+4CTJhRZ9v+pn/3zPYecR5Qq+fvDSGd62fGzM1j868DWfaq5PosywdILlZfagsli61xt7SJkrznOSFGpm6ATjt7tSOtGhJLn8NZ444YU+l4+gOePSyWWDQhUl3lSJjqiUOFUv9n8R0pn+qYXj8vUhJRpm2z1dRILeWg1vEm9UPkHuTLpkPFJ6DEjpMSClx4CUHgNSegxI6TEglC7/Tnd38B+5hNIL/Nev3/8VdpJEh50Wdn4ZI90oQq++pRUf/VVXMgi71OntnN2OSO+L1wtfQcsvQNNMqJohuQXsUMubjtOw8BHpLkVnZiS3h132vQbSn+N/KMXoJfwLuysAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dataRTGCP]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='response Time'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69c56ba0-7769-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Response%20Time%20',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))" DesignTimeRectangle="15, 298, 190, 58" FriendlyName="'11ms'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='dashboardViewport' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' parentid='dashboardViewport' tag='DIV' check:text='11ms' /&gt;" Guid="87825879-fb7b-4d53-96d2-db25c37281bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMIAAAA+CAYAAAB5scRTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOHSURBVHhe7dfPaxRnHMdx/4euza7VWBIFU8VUKVmwXvwBgUAoFCpYKBZDioJ4ak1hIz2klwqSCJJDDBIXGpVgCk2EJgSay9ZFgoGFwIohIQuW7cVc2kPx8PF5hslsfowQdfLsmH0fXrA7z3dnL983O7ujLrlHn6VPaE/9PqDm2N23DRACahohAAYhAAYhAAYhAAYhoCZ8/e2lNdafEwJqAiEABiEABiEABiEABiEABiEABiEABiEABiEABiEABiEABiEABiE40tHxUvMv/o2UvWfYd+HNEYIjhBBvhOBIeAjzut3fq4znD01vOLfKGhlembmrkaXKGSFEhxAcCQvh0ViXEhfS2uH5RSPrzj35W/o0mLmkvqeVM0KIDiE4UgnhhZ4szevXge/0UbDgG0OYWyrp99+uKr1mhhC2CiE4EoTw9IFOr1nuFatDeKzvQ2cIYasQgiMbQzipL7N3dDZY8rAQjit9464yP67MEMJWIQRHghC8R6Oy5v5ZvfDrQ7CPRmU98WZK6usmhK1GCI5UQljt9SFUEIILhOAIIcQbIThCCPFGCI4QQrwRgiOEEG+E4AghxBshOEII8UYIjhBCvBGCI4QQb4TgSHgI74YQokMIjhBCvBGCIz/1/K+5v/8LXei3Ye9l7xn2XXhzhAAYhAAYhAAYhFAN57O6N9yr9usPNZ6b1ejQFTW3XFTXg7wmc3llr19Ukz/bdL5X/ROz3vV7N68E1xEtQqiGH6ZUWChpeiKrzsx9TS4sq1Cc0/hAjzoH8pp5/kzZC2aupV/jZm5yqEftlwc1WlzW9NCZ8HvinRBCNdgQilPq9N+fGyupONEbnF/LLWtywLy+PKWZhby6TvmfO9WmZn8G0SKEavBDOOe/tyEUxrqD8yCE+m/0858lLT4vq1DwH6H8GUSLEKph0yH4Ws6oNZPVaME8Qk30VK4jMoRQDZsNIfNQf+Xuq9W/3jr8TIu5bDCH6BBCNWw2hJZuDc6UtbhQVtEzqz77J9qfQ3QI4T3Q9EWH2r9qCz1DNAgBMAgB2ARCAAxCAAxCAAxCAIwghGSKEFC77O7bBkwI9Wo++rk+bjgQOghsV3bn7e7bBrwQGvYd1KHDaWJAzbC7bne+cf+hSgh1yd1qaPxEh48c834qgO3O7npDY5O3+14IqV17vRcf1u1WYmdKHySSRh2wjSWVSKS8nbe7n9q1V68Ahz+i/xYgOP8AAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Response Time - Elastic' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69c56ba0-7769-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Response%20Time%20',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))" DesignTimeRectangle="8, 210, 1366, 468" FriendlyName="'Summary ReponseTime'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;" Guid="4731c11d-4c83-4175-bf34-dbcf4a0b2fb8" InformativeScreenshot="f7bb0e04416af2ebac0ff2b7504495f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Response Time - Elastic' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:WriteRange AddHeaders="False" DataTable="[dataRTGCP]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="ResponseTime" StartingCell="A2:A19" WorkbookPath="[out_DataHourlyReport]" />
+            <uix:NTakeScreenshot DisplayName="Take Screenshot 'Summary ReponseTime'" FileName="[out_Screenshot + &quot;ResponseTimeGCP.png&quot;]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NTakeScreenshot.Target>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69c56ba0-7769-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Response%20Time%20',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))" DesignTimeRectangle="8, 210, 1366, 468" FriendlyName="'Summary ReponseTime'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='dashboardViewport' tag='DIV' aaname='' check:text='Summary ReponseTime Dashboard panel: Summary ReponseTime Summary Reporting Reponse Time&amp;#xD;&amp;#xA;Pasar.id -' /&gt;" Guid="a4039da6-a1fb-4ff5-b47f-819652c06024" ImageBase64="" InformativeScreenshot="894a4f7e0c90ace6acdf76d9b12a1241.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Response Time - Elastic' /&gt;" SearchSteps="Selector, FuzzySelector" />
+              </uix:NTakeScreenshot.Target>
+            </uix:NTakeScreenshot>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="b75e0201c8b58c1c8c80a0fc09be854b.png" Selector="&lt;html app='chrome.exe' title='Response Time - Elastic'/&gt;" Url="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/69c56ba0-7769-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Response%20Time%20',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="BRIDGE" AttachMode="ByInstance" DisplayName="Use Browser Chrome: BRIDGE-BRIVA Production - Elastic" sap:VirtualizedContainerService.HintSize="431,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1223" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable1" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable2" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable4" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataBrimola" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataSenyuM" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataRefToday" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataRTBRIDGE" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataSRBRIDGE" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Refresh'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/d57fbad0-9064-11ec-b49c-2fc2e32d4b05?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'BRIDGE-BRIVA%20Production',viewMode:view)" DesignTimeRectangle="1294, 147, 43, 18" ElementType="Text" FriendlyName="'Refresh'" FullSelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='SPAN' type='' check:text='Refresh' /&gt;" Guid="1f3a3866-b2fd-467c-93d7-0c3d7c0f7ab6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAAWCAYAAABQUsXJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKSSURBVFhH7ZW9ayJRFMXn+yNFYFlYwsI0smBjI7JNLALBxlJsbELAZgpBbGwEsZlGEJtpRNjGLqWdnaWdnWU6y/wPJ+c548xoZl3X7CKCxcGZ9+597zfvnvuUbn694VJ1hT+XrvDn0r+FH73CThv/T0rAz6Fni1C2unehNxZHwqxg3DuQM0WojVXK/GmynorQe+lzQgn4GXSpDMPj6fnUcAGjXIBSm+8kpGo4hpr1YaXNfUJmVYLeSZ8T+gg/TAT4L9AcLwG1gukOoNc8GK1lUBV/xo+sQHYq0Dhu9sOxFqvW8Rk7gBmuafdfYDBGfxpHY8E+S5h1jjPW6L1G4xv4NvfczvFgoxzqMLw40Qh+CeNnEVp9BotVMauPUKpz2KMVrEaTVmvCaE9h+WGesFB1ArMdWM/udKHkujA9xvOjtGwl3EvY9ZGQPIzhnHs40Nrrzf4CXmaO0VsGOZkCdC9ko/bgCdeYckOhCfScA9VdbubtNgF3LLTgps8wt7D5cdwf4XtcMX54rgZDxIZjdusZslhvOKHlBqmWE/BawjaWWyZP3FN78DmoZVEiD1pOgloPwIVsJkp3iYam5NuwUr+Bj5tdrO3s5CoZB1J1xrk1G7MM+WsB6oOoXgy373nBcAA+YZuexw1ivweJ8cfs6Cj4JszoPU1r9gR75SEHJTy00+G5mFn6Fgf3fXo2Ud4R40u0xojPf4TnWmV6uRU3nNXobprxpj9ho0+jWGEnib0knj8BTwmIWxemAOS71XKh3PH6FGWnhTTeOFHcQXhqxMbM/4C8sQ1/8zyIzbq8aUq0IBtcyXJt0dRhb/wF/PGy/eA2OEniXzg8jKPGDyiCl798hyRJF6EP8JeoK/y5dIU/j97wDvDAjpvh/7UiAAAAAElFTkSuQmCC" InformativeScreenshot="4a3fcb1ff9ad9fbda6aa4ed0d7f89de9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BRIDGE-BRIVA Production - Elastic' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1263, 141, 89, 30" ElementType="Button" FriendlyName="'Refresh'" FullSelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='BUTTON' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARKSURBVGhD7Zo7ayNXGIZHmrvNXrzayLIc7QYTcKNGmDRWsbC4UYoEoyJayLLgRoWCUSMXBqPdoLAIjGKYRjikUaott3Pn0p06J9u4c5qQ//Dl/WZGM5J8bIvxyFLYUzx45lzm8pxz3jMGKdnVr2gl+1xyD7BrRhFVSqbLiPSlH97S4q9/0cLv/0pigF0uVd6NCGcC6Y8hfKH7t7Cz5A7A6eMx8YH0xSM5w6fF4tGnq9IzK8+EjSXxwY5HpWdywoaS+GDHQ9Kf0bKUPnXYMbt2pfO0l9KnDzseRIyUfk9I6TPgXqXbzgVZ7b6wLla6F2SLyueEqUm3mqekf7/nwsdcZjY+kv7d3pW2o6DfepGSAzarpNfOJpR4TsZmjhJrRVJr54L6aFivi6Q3xXVRiF06z2a18C2pmxVXMsPHeqU1ofQT0pUSGS3MVlzL7pyRUdqgZMUbuBvpHJO67pAlqrsDZlkhfV9cF4XYpasFCKv1gnMWZ+5BPtArv7jyh9tfxZfeGSpzPpCWaw3JPCezeuhey6j3vVXgnGBwtimR2yaNB7jtl9WxSvYdtD0k07+m3f5ABtror4+DMu8+fTJ3UI62RvMiKHelN3DPQR0mRNAnArFK5xjhWT1Shgzn2e2CF+VBGK6/ikA6z+BAep+Mb4qk7ZyQhVVgll9SsnxKdvecrNouImmXDKwoy/H7cdSUe1hlXkTZ+weUzB+Q2UJ7DIa2vu3fi2PtJeRiEDunuEeOtMale3+WnkAfo9n3+qxtkN7yny0CsUpnsRwhojpmso2UpUNqzYsms9EjPZ8jter1sxsQOxI1Z5D1hsyB5MJxmP/+ebhCMGD5Chnc1i+z628owdfr9BBNh8JoYunaULxY1RKeJ/qeca/SjR3HRVQXwtLzpJZ4KbdIyyuk7oQDZeOFlczQRgsSD/2VcY30cBPma+dG+ibXcqSUT1B3iQ2zRInUBqkveLWEUscznZ9hbqSL4mUYbasafMlcz1i8NFsQE+a598LXrJaJpO+SGZyLuETmYy94kaekP9hzLZ1xN1LBbObN9aYBCRmTDgnmVjp8ybaDTB6KgS7abyFCuji+VTquVUJW18N9xaoduJvkQruHDfhj0JZjR8FewcdzL51zm5etWnxFxk9/uPAxD8btmygzLh2wvIdVMlkszq16lZIZfEZyPCBqNHzBBO1ulA662DALX1PCjRf8LWAA3eviy2ULUYWNN7mOa/Nm62f/3EsfEHy1IJdvj5Ro2I73dREJ/q/VH8SJymNkatKjkljKkqIo/wtEzz8Jcyf9c0BKnwFS+gyQ0meAlD4DpPQZIJYuf043PY4+iaU/qrwl+7d/xJ0kkWGnj358L5aeXv6SHlTe4d/oP4WdJRGAywevfnbdjkjnH8AMxH+RzlLqaYZSqWVaepKW3AF2mHq67DoNhQfSvd8ycoXHKqXTq2gsuQvskF0OvA5m+Ur2Of0HMDki7bbQMR8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dataSRBRIDGE]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='filters' ReferenceIdx='0' Name='filters' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Count 25' ReferenceIdx='1' Name='Count 25' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Count percentages' ReferenceIdx='2' Name='Count percentages'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='filters' attr='text' /&gt;&lt;column name='Count' attr='text' /&gt;&lt;column name='Count percentages' attr='text' /&gt;&lt;/extract-table&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_3" InteractionMode="DebuggerApi" LimitExtractionTo="Rows" MaximumResults="1" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/d57fbad0-9064-11ec-b49c-2fc2e32d4b05?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'BRIDGE-BRIVA%20Production',viewMode:view)" DesignTimeRectangle="462, 486, 22, 11" ElementType="Text" FriendlyName="'100%'" FullSelectorArgument="&lt;webctrl aaname='100%' parentid='dashboardViewport' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='100%' parentid='dashboardViewport' tag='SPAN' type='' check:text='100%' /&gt;" Guid="2772cb93-9e8b-4c09-af0d-ad4165a0f2ff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAPCAYAAAD6Ud/mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVDhP7ZI9a8JQFIb7R+Lkkqmbizg5SAulQ1FwECdBKBQdoks2C4Ig7ZQhZJAMYofoYBwMAYOQ4BAICIFANqf+i7fnmg8/wA5COzm8cO/5eu45595xmSz+QzfQ1ToFlRVMxr30XhouoNsedE1CKY2roa1tYNgbqMNaanufezCWX6jm2L2AxmiG9kOScwR6ktdwgm8Etho5BROOO0O9+IjXeQhHa+3tdXYed3Bf7GGyDaE0Kba/hkX+/NiHIWfBU64xF8HHtZnORqfSSyNQgwrqwyP71kQ1I1LxDbpJvOzBnXfAvZmwVgraSx/T/gemronGvrODLoIG9g4TIbEnAPIHJupJPOt6JdG5gLygoCvQCFc+1DTvoIug7io8BbFXZiTo1NkxyKIRJfl56tDSRAwIZtBuVaGQ+i6C8iM/3QvXXMAhO5+p4NMNobK9kP1FC2kncbFnljujTxPXiPcU1f0FxOVEKO4OLr3MCXwocXe8QNAghGWHcNln2efVaNQepDI7tyiPdkX70uVKVIt0Bvo73UBXKosfsM+n/uoV9HUAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BRIDGE-BRIVA Production - Elastic' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="1175, 247, 152, 89" FriendlyName="'filters Count'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;kbn-agg-table-group&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;kbn-agg-table&amp;gt;paginated-table&amp;gt;paginate&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;" Guid="b5fff0dc-b69f-4b66-8b6c-250010c896a7" InformativeScreenshot="a10e6f20fc5c51d020fe598c908f6ca5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BRIDGE-BRIVA Production - Elastic' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:WriteRange AddHeaders="False" DataTable="[dataSRBRIDGE]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="BRIDGE" StartingCell="A2:A5" WorkbookPath="[out_DataHourlyReport]" />
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dataRTBRIDGE]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_4" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/d57fbad0-9064-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'BRIDGE-BRIVA%20Production',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))" DesignTimeRectangle="1022, 235, 132, 163" FriendlyName="'136Average ResponseTime…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' parentid='dashboardViewport' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' parentid='dashboardViewport' tag='DIV' check:text='136Average ResponseTime_ms' /&gt;" Guid="b7bc786e-d7e9-4d99-bc2f-faa0a46702d3" ImageBase64="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TtRHa/j7C+jTzg9DulZnaAJGxvStXPfyLxf+UH7BNQKO3jJu4dYzMI/7+iKO5G7fekUhwlvyAl6th0mZtR5IrkTRhnBazPjzHFG5gINdbzFjr98rGO+lg/P+j8/Sao1Q3JoxzutN2hBOi51r2FuZgZFJJLmqFiwVXKX2co+nEfwfeh9ihVb8ZzAfHKt5eRBGljIqI2c/v7doW3jDvnNSy20j7rwyhsWNY5WPzh/th4036eWlh/1cdf5oR8t5Iy3y4ePJHS/U6tdEEpOrKpGSL7yH7fU57TlI3r4jZ45QCteSOJndOoeM+krXeF8vwuG7bXrPuLc5py36WtzLAr3rchJ3BfTsJ4fY8QaxTYN31NvG0Z4xeJhwaiBfeFReWX3pKh/DfHIGprcuMFxSXtw/v3oNxcKhlvPG/bSaJuz58GlVRs9C+XD/vBPKhfui+tMYoq8hv5nCKJSBPS1Jo7Zf9bw4LcCuIWu+j0V4YyKmBiV6poWM2pOXKx/gdHcVppcO4RRDf5D8aXkvC3SfSpnOScF8Dt8XzynROy4E0dTLJDrbMwZtCq/hy/kpzs1DlHoHpdwiPkR0XplehOZAb6Rhrx3y6/kd5l19HaB9EKGESsOL6B9L6Fn0fDhKDvbrSep42AmD0TCE2ypVh/brwd7dY3gLGw6npOA4nnDtviqjt+/l8hH6COPl/GPcywLd53QzaEPvXvUsn/ZszvaMQZvCUXAJwwiGkiL25tJRym/M6Lxy4i2GfjrGHnvqhyp1TXoJrcGIeqNRYxr73bBB6Vlc2bIJeEcjniIAjpYwzHrP37Aoo2fS7xFLuHZf4xkbn6/FvSyE9yGMe2nP5mzPGNw7pKsRTCNJ9fZ4eeW+sTl4o3/8sDTwmyMMmbk5az58GhtUlZmNYbs/JVIWsrBHYVdl4egc4yuZSUeFt7iXhbjCg/pN7amVuXjAHD4BaQyx3gtG5ZWncMRdwPaS3wtxjqVPjlnKa9NLqGv6ZWN4DxwNe7RAUvlwR5nZGLrwBez9hR0/jeqFUk+KNyXooXA6h9EKI4B3DaRjwmPcy0I84RHtGdSNoAOLNpxnaJUYkVduyGsjpdyqF8bVS1xAvuyHPQzDxV1aE3jXb8yH62URwo3nqFTPYS2YS8dwz12fevC/FVw/6CvcjgnH41b3shB3hDvbMwZtCI+JM69M+10jr629RN+YK+dtOS8GidEpZ36byoJPoY+NeS+Sav4fK/f7hn6/dum88HZwjCjh8fi+wkcX4d36YuxwJDyc7ytceHJEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEODNEOCuewz/CvbtSqjnJ8wAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BRIDGE-BRIVA Production - Elastic' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/d57fbad0-9064-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'BRIDGE-BRIVA%20Production',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))" DesignTimeRectangle="8, 163, 1349, 573" FriendlyName="'BRIDGE-BRIVA {Response'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;" Guid="70dda521-c4f1-43d2-b562-83321fb0a79e" InformativeScreenshot="a3e4b29c19591e3f019c50c3cb454a66.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BRIDGE-BRIVA Production - Elastic' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:WriteRange AddHeaders="False" DataTable="[dataRTBRIDGE]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="BRIDGE" StartingCell="A8:A12" WorkbookPath="[out_DataHourlyReport]" />
+            <uix:NTakeScreenshot DisplayName="Take Screenshot 'BRIDGE-BRIVA {Response'" FileName="[out_Screenshot + &quot;BRIDGE-BRIVA.png&quot;]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_3" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NTakeScreenshot.Target>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/d57fbad0-9064-11ec-b49c-2fc2e32d4b05?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'BRIDGE-BRIVA%20Production',viewMode:view)" DesignTimeRectangle="8, 205, 1349, 531" FriendlyName="'BRIDGE-BRIVA {Response'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='dashboardViewport' tag='DIV' aaname='' check:text='BRIDGE-BRIVA {Response code}Dashboard panel: BRIDGE-BRIVA {Response code}Count05010015003:0006:0009' /&gt;" Guid="936fda38-58a4-4d06-8d35-863d1001f764" ImageBase64="" InformativeScreenshot="443f868725a49c2051c7fb8993e6baf3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BRIDGE-BRIVA Production - Elastic' /&gt;" SearchSteps="Selector, FuzzySelector" />
+              </uix:NTakeScreenshot.Target>
+            </uix:NTakeScreenshot>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXpSURBVFhH1ZZvVFNlHMdvvvJlKoiYpmm9qHd1ynMGg93BgE02/rPJAJkYZacXmXVK046cOscwQ8FMqyVjgJZGLTXziHlESZDBIFOTjbGNbTQHnQyGHhPw1/PcPZc9u2xi9qZ+53zOHZd7n8/3+T33uRvzvymorJzjLJCzriLVXpda2ebSZNpdGlXAoVYGXIWKfvS/C4hap0oqwdeS2/59OXXsXHdJzrsubdbwQG4aTJMjC5KdwmHPkoJdFcRZkOFHobbie8kwD1euYpUWzdg7kJ8BHHnpQWaESA0LYFeyCAk48tI8zmxWQ4Z78AKAR1wludUO9WpwFCgQ8lAAYReQfEYXSAB7ZjJCgu5L24nHJMPfv/CFA0U5Jk5eiOWKoDxaB2YLsDqIIzvt6wcK8YtavrsPDc7JSYCwDtABsJwKESYXBOhXiMGZK6simshVv0GVfwndeDVXBrb89HB51CWgZh9xCUIBMI5McSHRhddyg25uVk3Z0Gm5GLrRANez0MBIGDXA9MzJAyiU0x1QJAUDyBNhQCVxR9wdTx15ZdvKQy/BpleV0KZIhstoQCvqhFBsRzi3bwbvsWYY7rUEblg7A15z82178xs3r9eIblg/Fvms+0Q++75E3+CBhCGPXuT16kUef53YM2JMdP/RkOAeMYq3E22wKqFyzpNfbhhecagCVu0vg0ZFAnSi1NdQF+xYTujXqcF37gyMjo6C1T0GpyxB8Gd8bsTWAl6TEoaaE8BnSoSb34vh1plkuHMuGSbPI9oQF5Ng6qLUD8hJ9Kj9hyskTzRVAI9ucy6cTE8EC9pCfXgp8MzXqeGm1wP93lF4sykAqo/Gp1HuGodNDQGweUbhz989MN6WD/faU2CqIwXuXUoBMKcCdKGjBR050OduVkz0DLPyq5drljWuh+VNL3I8bVgPNXkS+DFDBJdVLNjQevtbz0I/EqhrQ2I6QCYir2acCzHmPYsk6QA9mDSCLAgf4OeMaqJnmBWHKy7gADSqHRo4LhNBW4YYbNvf4lqMZ55VHS7HYszqD4O8jjqBr71zbYsgAAmB5Zhe2TmiZ5jHG8v7hQEw28rT4bRsFbiPf8OtMy3Gs+ZnTgdQ7ByHPnTt+OC34fLp9pMO9KRaiZ5hljWtD0QKkFhbDCbZC+Azd3AP22xyPsDJrjEYG2oPD0C3nwuQEiB61AEUAHUBaJY2rOOo2JQJQ53tcKp77L5iHnnEAIL155COET3DLG0qt/HCJeTI84y+DK6cCC7BbDPH4AB9g2gJXKbwANNiQk9KaAmWNpafx2IaOtD7De9xDxbearSUFvPyjUbyEP66lZo1PXOMFP2PDT2EqAN7HjPqICr1ZVMdzis+vMXy9oQH4ENgec5utA3do3DdYRmGngxBgLD2w5SF3UX0DBNfX5YslC42lnHwn587uhEGR37j9jneavSs+ZljufOGF4bMpZPRxEFY9B6QhV5E+FW82KjzxyMRDx+APvfskdfghK2DazHeavhhw+A1x+eOXf0Jak9UoJmjdZ8h5wOwMNUteBXjijfq3sGSRfVrOWgxfz6uvhRQt6C0pRqMV85Aq7OXo+FyC5SYqmDJXg3cNsuRRCjm5XwA9m2iDRX+Oo43rvXwAbAMI/ybZyEh1lACCw9oIXbvGjD9kE2te6QASN7FusGpi/xjNba+RC0U0YRJyTHGUAwxn2jg+c80MNmjEEhDYp7JLraA6CLXorq1VbyIBstoMc8CvRZi9mugt1WJBMJ1D7UdM2GW7iCa6IV/OMbVaY/SEhpuxoQFdQh9EWgb0devRfiy4eXBAHfN0iP/6JdxnKH0g9i6cCENJ0fM/1QD/na69bRYCve60cy7pTseWE7XfIO2MPag1s3LOGGddpp5B4ug6lguEvFtp+Vo1p0S96xrPlvh3bHgi+ItMXqtH0vpEHF6DdzqUkyEi6Uw0Snx/3WJ3Rz1aX+Ywi+refo1STEGbXXMwaLWRz/XWL9ryfbc7WQDaH2td81sK2p19YQlNWnGS+a/WwzzN8pWpGcXa7w4AAAAAElFTkSuQmCC" InformativeScreenshot="b4c807b1eeaa5312ac86fdd36a97cdbb.png" Selector="&lt;html app='chrome.exe' title='BRIDGE-BRIVA Production - Elastic'/&gt;" Url="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/d57fbad0-9064-11ec-b49c-2fc2e32d4b05?_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'BRIDGE-BRIVA%20Production',viewMode:view)&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Availability" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Overview HTTP Monitoring - Ecosystem - Elastic" sap:VirtualizedContainerService.HintSize="431,82" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,601" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable1" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable2" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable4" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataBrimola" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataSenyuM" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataRefToday" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataRTBRIDGE" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataSRBRIDGE" />
+              <Variable x:TypeArguments="sd:DataTable" Name="data_Availability" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Refresh'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/d57fbad0-9064-11ec-b49c-2fc2e32d4b05?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fd,to:now%2Fd))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'BRIDGE-BRIVA%20Production',viewMode:view)" DesignTimeRectangle="1294, 147, 43, 18" ElementType="Text" FriendlyName="'Refresh'" FullSelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='SPAN' type='' check:text='Refresh' /&gt;" Guid="1f3a3866-b2fd-467c-93d7-0c3d7c0f7ab6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC8AAAAWCAYAAABQUsXJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKSSURBVFhH7ZW9ayJRFMXn+yNFYFlYwsI0smBjI7JNLALBxlJsbELAZgpBbGwEsZlGEJtpRNjGLqWdnaWdnWU6y/wPJ+c548xoZl3X7CKCxcGZ9+597zfvnvuUbn694VJ1hT+XrvDn0r+FH73CThv/T0rAz6Fni1C2unehNxZHwqxg3DuQM0WojVXK/GmynorQe+lzQgn4GXSpDMPj6fnUcAGjXIBSm+8kpGo4hpr1YaXNfUJmVYLeSZ8T+gg/TAT4L9AcLwG1gukOoNc8GK1lUBV/xo+sQHYq0Dhu9sOxFqvW8Rk7gBmuafdfYDBGfxpHY8E+S5h1jjPW6L1G4xv4NvfczvFgoxzqMLw40Qh+CeNnEVp9BotVMauPUKpz2KMVrEaTVmvCaE9h+WGesFB1ArMdWM/udKHkujA9xvOjtGwl3EvY9ZGQPIzhnHs40Nrrzf4CXmaO0VsGOZkCdC9ko/bgCdeYckOhCfScA9VdbubtNgF3LLTgps8wt7D5cdwf4XtcMX54rgZDxIZjdusZslhvOKHlBqmWE/BawjaWWyZP3FN78DmoZVEiD1pOgloPwIVsJkp3iYam5NuwUr+Bj5tdrO3s5CoZB1J1xrk1G7MM+WsB6oOoXgy373nBcAA+YZuexw1ivweJ8cfs6Cj4JszoPU1r9gR75SEHJTy00+G5mFn6Fgf3fXo2Ud4R40u0xojPf4TnWmV6uRU3nNXobprxpj9ho0+jWGEnib0knj8BTwmIWxemAOS71XKh3PH6FGWnhTTeOFHcQXhqxMbM/4C8sQ1/8zyIzbq8aUq0IBtcyXJt0dRhb/wF/PGy/eA2OEniXzg8jKPGDyiCl798hyRJF6EP8JeoK/y5dIU/j97wDvDAjpvh/7UiAAAAAElFTkSuQmCC" InformativeScreenshot="4a3fcb1ff9ad9fbda6aa4ed0d7f89de9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BRIDGE-BRIVA Production - Elastic' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1263, 141, 89, 30" ElementType="Button" FriendlyName="'Refresh'" FullSelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Refresh' parentid='dashboardChrome' tag='BUTTON' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF0AAAAiCAYAAAA9BdXXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARKSURBVGhD7Zo7ayNXGIZHmrvNXrzayLIc7QYTcKNGmDRWsbC4UYoEoyJayLLgRoWCUSMXBqPdoLAIjGKYRjikUaott3Pn0p06J9u4c5qQ//Dl/WZGM5J8bIvxyFLYUzx45lzm8pxz3jMGKdnVr2gl+1xyD7BrRhFVSqbLiPSlH97S4q9/0cLv/0pigF0uVd6NCGcC6Y8hfKH7t7Cz5A7A6eMx8YH0xSM5w6fF4tGnq9IzK8+EjSXxwY5HpWdywoaS+GDHQ9Kf0bKUPnXYMbt2pfO0l9KnDzseRIyUfk9I6TPgXqXbzgVZ7b6wLla6F2SLyueEqUm3mqekf7/nwsdcZjY+kv7d3pW2o6DfepGSAzarpNfOJpR4TsZmjhJrRVJr54L6aFivi6Q3xXVRiF06z2a18C2pmxVXMsPHeqU1ofQT0pUSGS3MVlzL7pyRUdqgZMUbuBvpHJO67pAlqrsDZlkhfV9cF4XYpasFCKv1gnMWZ+5BPtArv7jyh9tfxZfeGSpzPpCWaw3JPCezeuhey6j3vVXgnGBwtimR2yaNB7jtl9WxSvYdtD0k07+m3f5ABtror4+DMu8+fTJ3UI62RvMiKHelN3DPQR0mRNAnArFK5xjhWT1Shgzn2e2CF+VBGK6/ikA6z+BAep+Mb4qk7ZyQhVVgll9SsnxKdvecrNouImmXDKwoy/H7cdSUe1hlXkTZ+weUzB+Q2UJ7DIa2vu3fi2PtJeRiEDunuEeOtMale3+WnkAfo9n3+qxtkN7yny0CsUpnsRwhojpmso2UpUNqzYsms9EjPZ8jter1sxsQOxI1Z5D1hsyB5MJxmP/+ebhCMGD5Chnc1i+z628owdfr9BBNh8JoYunaULxY1RKeJ/qeca/SjR3HRVQXwtLzpJZ4KbdIyyuk7oQDZeOFlczQRgsSD/2VcY30cBPma+dG+ibXcqSUT1B3iQ2zRInUBqkveLWEUscznZ9hbqSL4mUYbasafMlcz1i8NFsQE+a598LXrJaJpO+SGZyLuETmYy94kaekP9hzLZ1xN1LBbObN9aYBCRmTDgnmVjp8ybaDTB6KgS7abyFCuji+VTquVUJW18N9xaoduJvkQruHDfhj0JZjR8FewcdzL51zm5etWnxFxk9/uPAxD8btmygzLh2wvIdVMlkszq16lZIZfEZyPCBqNHzBBO1ulA662DALX1PCjRf8LWAA3eviy2ULUYWNN7mOa/Nm62f/3EsfEHy1IJdvj5Ro2I73dREJ/q/VH8SJymNkatKjkljKkqIo/wtEzz8Jcyf9c0BKnwFS+gyQ0meAlD4DpPQZIJYuf043PY4+iaU/qrwl+7d/xJ0kkWGnj358L5aeXv6SHlTe4d/oP4WdJRGAywevfnbdjkjnH8AMxH+RzlLqaYZSqWVaepKW3AF2mHq67DoNhQfSvd8ycoXHKqXTq2gsuQvskF0OvA5m+Ur2Of0HMDki7bbQMR8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[data_Availability]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='svg' idx='1' /&gt;&lt;webctrl tag='g' idx='1' /&gt;&lt;webctrl tag='g' idx='2' /&gt;&lt;webctrl tag='g' idx='1' /&gt;&lt;webctrl tag='text' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_6" MaximumResults="0" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/8840c5d0-f229-11ec-98b5-d358d6fcc7ed?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fw,to:now%2Fw))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Overview%20HTTP%20Monitoring%20-%20Ecosystem%20',viewMode:view)" DesignTimeRectangle="21, 262, 260, 91" FriendlyName="'Up (99.98%)Down (0.02%)'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='dashboardViewport' tag='DIV' aaname='' check:text='Up (99.98%)Down (0.02%)' /&gt;" Guid="3788ee36-b9fc-44a2-9e9d-1c08ab56e855" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Overview HTTP Monitoring - Ecosystem - Elastic' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/8840c5d0-f229-11ec-98b5-d358d6fcc7ed?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now%2Fw,to:now%2Fw))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Overview%20HTTP%20Monitoring%20-%20Ecosystem%20',viewMode:view)" DesignTimeRectangle="8, 210, 1349, 1854" FriendlyName="'brimolaDashboard panel:'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;dashboard-app&amp;gt;div&amp;gt;div&amp;gt;div' parentid='dashboardViewport' tag='DIV' /&gt;" Guid="3a23046d-bc61-40f5-9070-281aa92fc77e" InformativeScreenshot="fc14af7ffda84d842f92a94fede5bcd5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Overview HTTP Monitoring - Ecosystem - Elastic' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:WriteRange AddHeaders="False" DataTable="[data_Availability]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="Avail" StartingCell="A2:A15" WorkbookPath="[out_DataHourlyReport]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="2f599f507e1661e4cfbdf5881186318d.png" Selector="&lt;html app='chrome.exe' title='Overview HTTP Monitoring - Ecosystem - Elastic'/&gt;" Url="https://9ddb74f42fec4ced84a0bc8571531db4.asia-southeast1.gcp.elastic-cloud.com:9243/app/kibana#/dashboard/8840c5d0-f229-11ec-98b5-d358d6fcc7ed?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-1h,to:now))&amp;_a=(description:'',filters:!(),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:'Overview%20HTTP%20Monitoring%20-%20Ecosystem%20',viewMode:view)" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

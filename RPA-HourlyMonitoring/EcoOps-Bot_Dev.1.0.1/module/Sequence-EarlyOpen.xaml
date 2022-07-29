@@ -1,0 +1,404 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_EarlyOpen" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="698,701" sap2010:WorkflowViewState.IdRef="Sequence_EarlyOpen_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence_EarlyOpen" sap:VirtualizedContainerService.HintSize="476,636" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: UMI corner 2022 - Grafana" sap:VirtualizedContainerService.HintSize="434,544" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="291779d2-5774-474b-98f2-6d84942db050" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,328" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,174" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Flowchart sap2010:Annotation.AnnotationText="Login" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+                    <Flowchart.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="isLoginDashboard" />
+                      <Variable x:TypeArguments="x:Boolean" Name="isLoginPageExist" />
+                      <Variable x:TypeArguments="x:String" Name="data_WebCheck" />
+                    </Flowchart.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">300,2.5</av:Point>
+                        <av:Size x:Key="ShapeSize">60,75</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">330,77.5 330,114</av:PointCollection>
+                        <x:Double x:Key="Height">950</x:Double>
+                        <x:Double x:Key="Width">660</x:Double>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Flowchart.StartNode>
+                      <x:Reference>__ReferenceID9</x:Reference>
+                    </Flowchart.StartNode>
+                    <FlowDecision x:Name="__ReferenceID5" Condition="[isLoginPageExist]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">300.641666666667,445.5</av:Point>
+                          <av:Size x:Key="ShapeSize">79,87</av:Size>
+                          <av:PointCollection x:Key="TrueConnector">300.641666666667,489 150,489 150,534.5</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">379.641666666667,489 409.641666666667,489 409.641666666667,491 450,491</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID0">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">50,534.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">150,585.5 150,630 260,630</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,1262" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <TryCatch.Try>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1035" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="ss:SecureString" Name="passwd" />
+                                  <Variable x:TypeArguments="x:String" Name="username" />
+                                  <Variable x:TypeArguments="ss:SecureString" Name="login_pswd" />
+                                  <Variable x:TypeArguments="x:String" Name="login_user" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Entry Data Login&quot;]" />
+                                <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="DDB.EcoOps.Grafana2" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[login_pswd]" Username="[login_user]" />
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email or username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="291779d2-5774-474b-98f2-6d84942db050" Text="[login_user]" Version="V1">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://172.18.219.98:3000/login" DesignTimeRectangle="603, 421, 176, 16" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' aaname='' /&gt;" Guid="5bd75cf3-3794-4d50-8636-f596b90c53cf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALQAAAAUCAYAAAAk0RfcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIHSURBVGhD7Zs/S8NAGIezKx1CDMZWg1UyFMkQEXHpFCqI4NJNBz+Ps7sfREfB1dVPc76/u8v/KA0o9MJveGjv7r33PeiTtxkSb3Kaq+jmWR09vKn48Z0Q54C7cBguewd3L2p6/aT2js9VEEaEOAfchcNw2Tu8f1WBTMQniTrLLghxDrgLh+Gyh5YNy7GwszshxDngLhyGyxSaOM/GQn98fnXmCNk2KDQZFf8utJ9cqnkQqzSLe9cJ+UsGCR1la7W6zUVQI+rVEmMRNsnlc63SGWJFXvm+Wi6UL/v6hbYxsjeyMchl9gvBQqVJaOKwT8ZXjZy1eohdyljioiw3Z/otDuPE5rNnasShPnGWQUKbHzwUgWMtgR7PRMaafL7IAkkxj/U+oaPMiFztsbnseltokwPzIu20WJM8UsuH7DY3hC4uNtSc6zg5b1aPk5xWeH2OspbNh/rEWQYJjS62QoeehWq/kMyKW5fTxJmOt5nQNpdd73RoSKn/DaS2CK27K/JLDEQthbR5y5o2TnfsTs5K6Ea+4gzESYZ16EKQuoQtoc1tiQGdu0/o8hZCqKS3a5qajK2cqVxMRm6hIWpL6Jr4+tbmJ6HLi8XmK89AXGSQ0O05QrYNCk1GxcZCE+ICFJqMCgpNRkVXaDw+Oufjo8RN4K52GELzAX/iOo0H/PkKFnGd6hWsXH0DKW7wNo4FU3MAAAAASUVORK5CYII=" InformativeScreenshot="049341c91345c6582910367693692c5c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Grafana' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="604, 411, 50, 8" ElementType="Text" FriendlyName="'Email or username'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='' check:text='Email or username' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAMCAYAAAAppE4WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEYSURBVEhLY+CRMfg/HPGox7DjgP/JM6f9d8YqN7AY4TG71v89yzf/nw/EPeUBGArRsXPHsv/JdkPEY1VwD4EcDPEkHHfUIcQ6crF6zLkDKj+z9X8ImA2TA6rraP2vDqUhchB1tuXL4Gz12GlgdlU+ciBnoNkLZcMwSB88UkBugrgFa4xVxcIckvu/CqQRRCMbitVjMLUgD077nwrEiJhE9RjcIciBBQoEoMeqYiFuAQcylEa1F2QuzF6IefDAAWKwfqCdOJIiMJQwPIbkCKBYCL4YgzsAajay3MwJ//OQzEE4CpfHkGIMbC+mxxAxhs1jwwyPemyoYQZJryn/5WL2/JdPODKsMIO0e9d/UUXj/yJiksMIS/4HAGSUOIYFX3Z9AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,241" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="291779d2-5774-474b-98f2-6d84942db050" SecureText="[login_pswd]" Version="V1">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://172.18.219.98:3000/login" DesignTimeRectangle="603, 454, 176, 16" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='' /&gt;" Guid="ee322510-f00e-4e16-830a-40af4d7b0ece" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALQAAAAUCAYAAAAk0RfcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGMSURBVGhD7ZZBa4MwFMd3r9uhSEFIJwj2IMO2KUNy8SQ99djv/1XS95IYLXbMsDFq9j/8iL73kkL5+ScviThoAGIBQoOo8EKL8qA/5CcAi4PdnQjNjVXyBsDiYHchNIgGCA2iAkKDqIDQICqeW2jR6Fo8qAPwBfOFTitdyEafL1cvWSav9N7pIrV9Rb1zW+m179nZ9a6xM72gNFvvNlTvzIyi51WS67rttOL97ixF7xAahBAktJI5PW9IbCtdYWQjEanupU1znRFc432ZoNUJnJHAVuSKZmyNZ+xeFpo/Bne+qUNoEAa7+7qVhm+F7gXMKKlZSJPITC96O0psSuO7HktrpKaUdh/EROjxB8O/iSsHCMQI/T5TaHUhkVlUFq8XlqFkzd0Vg6mLkez+CjKIbq8Yw7XEzgyp3l9FzFkQGgTgE5qknpHQhJMOgGdkfkIDsACGhD5BaLB8kNAgKh4mtChr0wBgaYhyP01o8BOOlu2ASYz/hpPq79eTXyF0MPfymj8S/D6zZR6vUt8A9dl27e5+ntgAAAAASUVORK5CYII=" InformativeScreenshot="ede03daa1b0215de2a9c5200ba887858.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Grafana' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="604, 445, 27, 8" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl idx='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='LABEL' aaname='' check:text='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAMCAYAAACa7GYMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVDhP7ZAhDsJAEEU5AEeoJTWIhqSSml6gAoGp2iBJ5SZrUE0qqjepwpUDcMDP351ti2jAECpA/HRnd+a/P12towRL6YfgWQ2ji7Ge4Hxob3dcnboa8XD/Sb2Cy0MB1VmcmqcgpZXzrYc6TiHNxaLlTN7wPjvDsHev+9BrkYc5U00zrn8WLg3OKEE8mPi/4AIFQ/bmPlgANhZK11DuW0pw1xNr1pWFKenNEB76fnOpBSDAw7gNgTSUMzeisWztoDOhCfXwiCHDzPzmC+gPX0QeHm0SbHfpl5XiAetGV5QMAVz4AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="291779d2-5774-474b-98f2-6d84942db050" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="http://172.18.219.98:3000/login" DesignTimeRectangle="603, 478, 176, 16" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' aaname='Log in' check:text='Log in' /&gt;" Guid="fddb84d8-d5c7-4f2d-8deb-2ad6fe20b3ee" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALQAAAAUCAYAAAAk0RfcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHrSURBVGhD7dvdSgJBFAdwH8DeINOKioo+tKeop4iioigq6g0yrTexIJ+i/IiiKAoN9yIJvLAu1hAvDE47+6G7OgMOmjTyF34cz87sXsifgyy7Pv/wIg2uMPkDTUOBiFEjZoUeGul3XRLWAQt0a3i7rdYP2FrhD3Ucan5tBDq4fEaR4zyAckIr53aoXROaLYSPcgDKYdltm9Ds4MLhK4ByzEDzJvT8wQuAcoQTem7/GUA5wgk9u/cEoBzhhJ7ZfQRpX6RVvynOXROLv/2QluavgRzhhJ7eeQBpVqBjrmPJEpkfLe3qqzXSSs19sTwL9AdlzeNsd42S9hrIEU7oqe17kPZpBLpCp06fqpGeLxrfi2ZYk05/WSHdte80XyctxfYYwU85vXNNkNEIdOuEnty6A2llM9BRp7cDPLlVpIwR6KtG790XtQOdqdYpc+H0zjVBhnBCT2zegrQyFdg/BvNjhDPh6ktl73pVp6h9XjRXp8LNuxXohNO3Xhs6IZzQ4xtZ6LWETrqdZxboE94e6IoVaOsBJU+gx9bTAMoRTujRtRSAcoQTOrh6DaAc7oTG46OgqpCRXe+EDnjf7OjWkLDyHqLvVbVu20AP2bfC+lfb30ARVnYOp/pYIP6TfoYfb6L0UVt4u62ckAci9At0S7QVj4FneQAAAABJRU5ErkJggg==" InformativeScreenshot="c3838eb3e6dfec45c2956d74ba7ff25a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Grafana' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="681, 479, 19, 14" ElementType="Text" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl aaname='Log in' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Log in' tag='SPAN' type='' check:text='Log in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAASCAYAAACw50UTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEsSURBVDhPtZRBSsNAFIbfBTyCiIoVFRVzIlG0KIqK3qBpe5UomFNokopSUZRGmoVByCJ2kUrIIsJvJpOJqWTRhW/gg/nm/fOTbIZmZjVwQdqFCy5o63wALmjz7BVc0MbpC7ig9ZNncEFrx0/gglaPHiEZwYu/0C19Orpv3/Ds+hmtHPYhkeWd0vswA+TLsyseJ/CC31zHFeUf6OXnIp3ALGa0fPAAyWdWPkZbuZUgcv1s7+cXTeVXY0SVXNtN4Vkik32EpVzOqNG8hyTMy3XlRVmj6cPJyq9Ln8zpRbkTp3AulcsZLe3fQRJiKP4qX1nQqHgQTs7jCHpxTx+kGN6+y3JDuZzR4l4PU2FEiIpuUd6qy/yBFnZtcEHzOxa4oLntG3DB++TWPfL/g4YfmRv9ljT6GA8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </TryCatch.Try>
+                            <TryCatch.Catches>
+                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ActivityAction x:TypeArguments="s:Exception">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                  </ActivityAction.Argument>
+                                </ActivityAction>
+                              </Catch>
+                            </TryCatch.Catches>
+                          </TryCatch>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">260,604.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">360,655.5 360,696.5</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:UiElementExists DisplayName="Element Exists 'A  #'" Exists="[isLoginDashboard]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                                <ui:UiElementExists.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d4610a56-8ab9-4d6e-ad33-5ce158c6daf1" InformativeScreenshot="ce69ee1022e19e6a368bbf084551a5bb" Selector="&lt;webctrl aaname='UMI corner 2022' tag='A' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:UiElementExists.Target>
+                              </ui:UiElementExists>
+                              <FlowStep.Next>
+                                <FlowDecision x:Name="__ReferenceID1" Condition="[isLoginDashboard]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <av:Point x:Key="ShapeLocation">320.5,696.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">79,87</av:Size>
+                                      <av:PointCollection x:Key="TrueConnector">320.5,740 240,740</av:PointCollection>
+                                      <av:PointCollection x:Key="FalseConnector">399.5,740 460,740</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <FlowDecision.True>
+                                    <FlowStep x:Name="__ReferenceID2">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">40,707</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Sukses Login&quot;]">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:LogMessage>
+                                      </Sequence>
+                                    </FlowStep>
+                                  </FlowDecision.True>
+                                  <FlowDecision.False>
+                                    <FlowStep x:Name="__ReferenceID4">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">460,707</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Gagal Login&quot;]" />
+                                      </Sequence>
+                                    </FlowStep>
+                                  </FlowDecision.False>
+                                </FlowDecision>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <FlowStep x:Name="__ReferenceID3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">450,457</av:Point>
+                              <av:Size x:Key="ShapeSize">200,66</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">550,523 550,560 250,560</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_3" Version="V1" />
+                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                          </Sequence>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.False>
+                    </FlowDecision>
+                    <x:Reference>__ReferenceID0</x:Reference>
+                    <x:Reference>__ReferenceID1</x:Reference>
+                    <x:Reference>__ReferenceID2</x:Reference>
+                    <x:Reference>__ReferenceID3</x:Reference>
+                    <x:Reference>__ReferenceID4</x:Reference>
+                    <FlowStep x:Name="__ReferenceID6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">240,337.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">340,389.5 340,419.5 340.141666666667,419.5 340.141666666667,445.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[isLoginPageExist]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="943a904a-e960-4906-b7b5-9c94c2447aa3" InformativeScreenshot="c4aa2aab32c720ce5681f4bfc5cbf436" Selector="&lt;html app='chrome.exe' title='Grafana' /&gt;&lt;webctrl css-selector='body&amp;gt;grafana-app&amp;gt;div&amp;gt;div&amp;gt;react-container&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' innertext='Email or usernamePasswordLog inForgot your password?' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:UiElementExists.Target>
+                      </ui:UiElementExists>
+                      <FlowStep.Next>
+                        <x:Reference>__ReferenceID5</x:Reference>
+                      </FlowStep.Next>
+                    </FlowStep>
+                    <FlowStep x:Name="__ReferenceID9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">230,114</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">330,166 330,196.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:UiElementExists DisplayName="Element Exists 'A  #'" Exists="[isLoginDashboard]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d4610a56-8ab9-4d6e-ad33-5ce158c6daf1" InformativeScreenshot="ce69ee1022e19e6a368bbf084551a5bb" Selector="&lt;webctrl aaname='UMI corner 2022' tag='A' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:UiElementExists.Target>
+                      </ui:UiElementExists>
+                      <FlowStep.Next>
+                        <FlowDecision x:Name="__ReferenceID7" Condition="[isLoginDashboard]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3" True="{x:Reference __ReferenceID2}" False="{x:Reference __ReferenceID6}">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <av:Point x:Key="ShapeLocation">290.5,196.5</av:Point>
+                              <av:Size x:Key="ShapeSize">79,87</av:Size>
+                              <av:PointCollection x:Key="TrueConnector">290.5,240 10,240 10,740 40,740</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">369.5,240 399.5,240 399.5,307.5 340,307.5 340,337.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </FlowDecision>
+                      </FlowStep.Next>
+                    </FlowStep>
+                    <x:Reference>__ReferenceID7</x:Reference>
+                    <x:Reference>__ReferenceID8</x:Reference>
+                  </Flowchart>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_2" Version="V1" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADFUlEQVRYR72Xy27TQBSG8wh5hCwTzSzyCH2ErBGVKloQZUEtoOKygACbVqJE3MXVIG6iICzBBokiA1Jh6UfwI1hx7MS74T/p2Exmxk7aUH7pU+Jzm8nMmalbm0f9I6wOXBCBJWn+f5KDC4WOdB2+aDBtcIJWoi5DDk8YpAF8OagO2bugDWiLHEAr5cn02SSTFwhpIhsV9YBt4Floy1LlQhDNOFSScgKLbb84cphyIahsaadBk6bcqon+0wlQw/VAsUWqYKcm1U8J5TRkiF0IoAZSk2xQH8zU7YijhlX7JpAuuxBgO14qrgzdl5Cn/rDqregvYj8XEahzlPky5EBCviNrhdJkV7zMloAwOGbfv/5xHNcVLPMyCykOnxGefdid/onJrYLfG8esVNya8SrrAKHSX7UvPXyuHqsRxad4MVj/JHqCbKusJ02m4tO8B4SGcYnEa9y1xNlZ48UfKzxT/fLtjM9xHwiFSLoKxeu8U/jP8jA+8/dX4nsbNlfJ32Odj48sfG082ycwuIT9v8gjIBSMYNg86Qvj89x6JOMLnGqpdYrmg888CYMrzAXCgjGBwne5+j0Afr2mvfkG13kPiBLMCeS+q/Zfn2twjTeUOoTZfMkmX0g2uKjAuL0GGzwa+zZ59dUKabXMvU+2mJdswVnFzck7ILnB3T0f60pTqbRalgncYr3kNhNTmBgIOQ0QSV/RUMkdbaJ4VmoQIWzmtiX3mJPcR0A5UfpAK36XtZEX5H5A3yPYijsDz7a65iqQ0oe8kT7ibvqYixKC9KnZdMhrAwcsgcJPsciJtBp7PDEvtkLDZ7wOOulzBJoE6Yvqzs+FWE/LVZnaO7XhK9YFwkI0fFN+/uFrDF+zwJJHhMOXMwyea/SOeUCUEI22mTt6z7oF26Xx4fDtAV7ZRx95F4j5wEQ/zPBGbNPoM/eBmINw9Kmi4aYp+8J8IOZgvn/Xsm+tHhAT7LT87GvLwacHAsOvstOaelVXKvvRWgC+pJd9b1mXE/Y6/EH2E4PmIEe6/4+y3WY9+9XsZr+b0Zjd5pS9r9X+APzj9TA+m82jAAAAAElFTkSuQmCC" InformativeScreenshot="74cd2ccbf086c86a5b323f111418292b.png" Selector="&lt;html app='chrome.exe' title='UMI corner 2022 - Grafana'/&gt;" Url="http://172.18.219.98:3000/d/-sWjL0Ank/umi-corner-2022?orgId=1" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

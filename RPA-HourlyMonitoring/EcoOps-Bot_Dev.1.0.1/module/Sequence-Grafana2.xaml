@@ -1,0 +1,177 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Grafana2" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="698,1282" sap2010:WorkflowViewState.IdRef="Sequence_Grafana2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="38">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence_Grafana2" sap:VirtualizedContainerService.HintSize="476,1217" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="in_Config" />
+      <Variable x:TypeArguments="x:String" Name="out_DataHourlyReport" />
+      <Variable x:TypeArguments="x:String" Name="out_Screenshot" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[in_Config]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\data\in_Config.xlsx</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[out_DataHourlyReport]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\data\DataHourlyReport.xlsx</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[out_Screenshot]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Users\Administrator\Documents\UiPath\RPA-HourlyMonitoring\EcoOps-Bot_Dev.1.0.1\screenshot\</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Referal SenyuM YTD" AttachMode="ByInstance" DisplayName="Use Browser Chrome: UMI corner 2022 - Grafana" sap:VirtualizedContainerService.HintSize="434,923" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,676" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable1" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable2" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataTable4" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataBrimola" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataSenyuM" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataRefToday" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dataRefYTD" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dataRefYTD]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='total ref YTD'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="http://172.18.219.98:3000/d/-sWjL0Ank/umi-corner-2022?orgId=1" DesignTimeRectangle="820, 126, 491, 18" FriendlyName="'10815161000'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;grafana-app&amp;gt;div&amp;gt;div&amp;gt;react-container&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='panel-36' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' parentid='panel-36' tag='DIV' check:text='10815161000' /&gt;" Guid="fab2ba44-fbd5-4fff-9f05-6b3f28023f30" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAfAAAAAXCAYAAAD0mh1oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOeSURBVHhe7dzBS5NhHMDx7oWUlBSaqIf+gS5Bf0KnIPCwww4ePHjwskOU4owMLzsIKQVKJUkQNCJIRGEXoYgJQyYEoQiSNSo8vG9Q0eHp93uf993m9irIsHfv/B4+uL173ufd0+W7Z1s7dfpMm+npu2LOd1wCAABNSlutzQ4QcAAAYoCAAwAQQwQcAIAYIuAAAMQQAQcicPXadXN79LMZf/DHDAz8bTm6rjtjX7x1hq0fQOMIOBCBu+mv5tHTX2Zz72fL0vWNjJdC1w+gcQQc+M86Lnaa9MTv0Oi1Gl2nrjfs3wFAYwg4EAF9m3lzzzX5NcdMPnHMwlYQPddknzsm8VDI8VzJHsuvOCYpx/rFdMG1Y0uuWV5yTGreMfkgmtty3x+nMmv2/MKGnCfzTnn3fZ/stfU65fN3HJN945ihV055XLHgmGF/vvSqf+1dmU/O02ODMq89v/656zrD1g+gcQQciICGTaOceumY+4+rAi5BT0gEixLDRXkstaLBlBBLFBe2XVP8ICGXOBbk8QUJ9+RrCWh1gCXKw3K8GNz35xySOTNy3AZdSczlunPrfpCDY7MSZrluv7DH5Doy/7SOk7n1xcGyHM/LC4dBCb0+/kwezxRkbMhzJ+DA8SHgQATsDrwSyCDgGsbUko2q3rYhlbDOVAI+4EXSjt/ckvHVAZeI6q54/w7eWpa5ygGXXXVCAq47a/2bLb8DIHSOcsDtiweNdvmFhIytnktv63MOe+4EHDg+BByIwNECLnHMVd5Cn9uo2jXXBvy7a3Lerto12ReOGclVxlZHV+e2b527ZlV20knZyQfjCDgQDwQciMCRAr7jmLTskhd3Zcy6YwZnHfPeO1fUBnxXdumlyvlDbw8OeDnaGmyJ/Ud/HAEH4oGAAxE4KOAaz8S8/YxbP0f2dtD6xbSZqoDL7Zx3rqgJuBdmOU8/hz5sB67zJOWFwKrs2A/fgdvnl9Evzuln4P61vet4X3Szn4FPrdvzap87AQeODwEHInBgwDW8Nd/k1mM5jawc07fQJ99Voly3A9f5JKJ6flL+Vo7XBNyfs3wdfXEQjN0XcL6FDjQrAg5EYPyE/D9wXWfY+gE0joADERi99+1E/BLb2MSP0PUDaBwBByJw4+Yt77fCW/m30EfSJW+dYesH0DgCDgBADIUGvPNyT+hgAADQHLq6e+sDfrb9gkS816s7AABoLl3dfeZce0d9wAEAQLwQcAAAYqfN/APH9z5zu7HarwAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UMI corner 2022 - Grafana' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="38, 79, 1336, 657" FriendlyName="'umi /UMI'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;grafana-app&amp;gt;div&amp;gt;div&amp;gt;react-container&amp;gt;div' tag='DIV' /&gt;" Guid="4f80f3eb-6075-4e73-a63a-0b59757ce594" InformativeScreenshot="a0f2e146e34b287f3be8ae7a8cd7c028.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UMI corner 2022 - Grafana' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:WriteRange AddHeaders="False" DataTable="[dataRefYTD]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="RefYTD" StartingCell="A2:A12" WorkbookPath="[out_DataHourlyReport]" />
+            <uix:NTakeScreenshot DisplayName="Take Screenshot 'summary referral'" FileName="[out_Screenshot + &quot;ReferralYTDSenyuM.png&quot;]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="401d382f-00da-4abc-8daa-ba2d19afbfeb" Version="V1">
+              <uix:NTakeScreenshot.Target>
+                <uix:TargetAnchorable BrowserURL="http://172.18.219.98:3000/d/-sWjL0Ank/umi-corner-2022?orgId=1" DesignTimeRectangle="46, 115, 1320, 528" FriendlyName="'summary referral'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;grafana-app&amp;gt;div&amp;gt;div&amp;gt;react-container&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' tag='DIV' check:text='summary referral per partner x status referralSENT&amp;#xD;&amp;#xA;BRISPOT201PNM340PEGADAIAN101Total Realisasi ' /&gt;" Guid="6a684376-8165-4a5e-b80d-011782c89f60" ImageBase64="" InformativeScreenshot="627c44c7a69f7de16a0937e93e96bff0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UMI corner 2022 - Grafana' /&gt;" SearchSteps="Selector, FuzzySelector" />
+              </uix:NTakeScreenshot.Target>
+            </uix:NTakeScreenshot>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADFUlEQVRYR72Xy27TQBSG8wh5hCwTzSzyCH2ErBGVKloQZUEtoOKygACbVqJE3MXVIG6iICzBBokiA1Jh6UfwI1hx7MS74T/p2Exmxk7aUH7pU+Jzm8nMmalbm0f9I6wOXBCBJWn+f5KDC4WOdB2+aDBtcIJWoi5DDk8YpAF8OagO2bugDWiLHEAr5cn02SSTFwhpIhsV9YBt4Floy1LlQhDNOFSScgKLbb84cphyIahsaadBk6bcqon+0wlQw/VAsUWqYKcm1U8J5TRkiF0IoAZSk2xQH8zU7YijhlX7JpAuuxBgO14qrgzdl5Cn/rDqregvYj8XEahzlPky5EBCviNrhdJkV7zMloAwOGbfv/5xHNcVLPMyCykOnxGefdid/onJrYLfG8esVNya8SrrAKHSX7UvPXyuHqsRxad4MVj/JHqCbKusJ02m4tO8B4SGcYnEa9y1xNlZ48UfKzxT/fLtjM9xHwiFSLoKxeu8U/jP8jA+8/dX4nsbNlfJ32Odj48sfG082ycwuIT9v8gjIBSMYNg86Qvj89x6JOMLnGqpdYrmg888CYMrzAXCgjGBwne5+j0Afr2mvfkG13kPiBLMCeS+q/Zfn2twjTeUOoTZfMkmX0g2uKjAuL0GGzwa+zZ59dUKabXMvU+2mJdswVnFzck7ILnB3T0f60pTqbRalgncYr3kNhNTmBgIOQ0QSV/RUMkdbaJ4VmoQIWzmtiX3mJPcR0A5UfpAK36XtZEX5H5A3yPYijsDz7a65iqQ0oe8kT7ibvqYixKC9KnZdMhrAwcsgcJPsciJtBp7PDEvtkLDZ7wOOulzBJoE6Yvqzs+FWE/LVZnaO7XhK9YFwkI0fFN+/uFrDF+zwJJHhMOXMwyea/SOeUCUEI22mTt6z7oF26Xx4fDtAV7ZRx95F4j5wEQ/zPBGbNPoM/eBmINw9Kmi4aYp+8J8IOZgvn/Xsm+tHhAT7LT87GvLwacHAsOvstOaelVXKvvRWgC+pJd9b1mXE/Y6/EH2E4PmIEe6/4+y3WY9+9XsZr+b0Zjd5pS9r9X+APzj9TA+m82jAAAAAElFTkSuQmCC" InformativeScreenshot="23ff06ed0bee75b43780e4a305ac9351.png" Selector="&lt;html app='chrome.exe' title='UMI corner 2022 - Grafana'/&gt;" Url="http://172.18.219.98:3000/d/-sWjL0Ank/umi-corner-2022?orgId=1&amp;from=now-1h&amp;to=now" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
